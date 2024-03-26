@@ -13,6 +13,11 @@ import java.util.Set;
 
 public class BasePage {
 
+    // Encapsulation
+    public static BasePage getBasePage() { // static --> directly access from class w/o init
+        return new BasePage();
+    }
+
     public void sleepInSecond(long timeInSecond) {
         try {
             Thread.sleep(timeInSecond * 1000);

@@ -4,7 +4,9 @@
 
     <test name="Run on Firefox browser">
         <classes>
-            <class name="com.nopcommerce.user.User_01_Register_Login"/>
+            <class name="com.nopcommerce.user.Level_02_BasePage_01_Initial"/>
+            <class name="com.nopcommerce.user.Level_02_BasePage_02_StaticMethod"/>
+            <class name="com.nopcommerce.user.Level_02_BasePage_03_Inheritance"/>
         </classes>
     </test>
 

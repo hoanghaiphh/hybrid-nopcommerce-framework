@@ -137,6 +137,10 @@ public class BasePage {
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(getXpathLocator(locator)));
     }
 
+    public void waitForElementSelected(WebDriver driver, String locator) {
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeSelected(getXpathLocator(locator)));
+    }
+
     public WebElement getElement(WebDriver driver, String locator) {
         return driver.findElement(getXpathLocator(locator));
     }

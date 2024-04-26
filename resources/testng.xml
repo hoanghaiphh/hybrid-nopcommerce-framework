@@ -3,8 +3,23 @@
 <suite name="NopCommerce Automation Testing">
 
     <test name="Run on Firefox browser">
+        <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_03_Page_Object_Pattern"/>
+            <class name="com.nopcommerce.user.Level_05_Page_Factory"/>
+        </classes>
+    </test>
+
+    <test name="Run on Chrome browser">
+        <parameter name="browser" value="Chrome"/>
+        <classes>
+            <class name="com.nopcommerce.user.Level_05_Page_Factory"/>
+        </classes>
+    </test>
+
+    <test name="Run on Edge browser">
+        <parameter name="browser" value="Edge"/>
+        <classes>
+            <class name="com.nopcommerce.user.Level_05_Page_Factory"/>
         </classes>
     </test>
 

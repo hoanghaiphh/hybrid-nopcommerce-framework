@@ -207,11 +207,17 @@ public class BasePage {
         return getElements(driver, locator).size();
     }
 
+    public void setImplicitlyWait(WebDriver driver, int timeInSeconds) {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(timeInSeconds));
+    }
+
     public boolean isElementDisplayed(WebDriver driver, String locator) {
         boolean status = false;
+        setImplicitlyWait(driver, 3);
         if (getElementsSize(driver, locator) != 0) {
             status = getElement(driver, locator).isDisplayed();
         }
+        setImplicitlyWait(driver, 15);
         return status;
     }
 

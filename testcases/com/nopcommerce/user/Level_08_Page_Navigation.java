@@ -10,12 +10,15 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-public class Level_06_Page_Generator extends BaseTest {
+public class Level_08_Page_Navigation extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
     private CustomerInfoPageObject customerInfoPage;
+    private AddressesPageObject addressesPage;
+    private ChangePasswordPageObject changePasswordPage;
+    private OrdersPageObject ordersPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")
@@ -57,7 +60,7 @@ public class Level_06_Page_Generator extends BaseTest {
 
     @Test
     public void User_02_Login() {
-        registerPage.clickOnLogoutLink();
+        registerPage.clickOnLogoutLink(); // the page should always do 1 fixed action (auto login or logout after registering) --> this is a bug
 
         loginPage = registerPage.clickOnLoginLink();
 
@@ -77,6 +80,15 @@ public class Level_06_Page_Generator extends BaseTest {
         Assert.assertEquals(customerInfoPage.getValueInMonthDropdown(), monthOfBirth);
         Assert.assertEquals(customerInfoPage.getValueInYearDropdown(), yearOfBirth);
         Assert.assertEquals(customerInfoPage.getValueInCompanyTextbox(), companyName);
+    }
+
+    @Test
+    public void User_04_Switch_Page() {
+        addressesPage = customerInfoPage.clickOnAddressesLink();
+        customerInfoPage = addressesPage.clickOnCustomerInfoLink();
+        changePasswordPage = customerInfoPage.clickOnChangePasswordLink();
+        ordersPage = changePasswordPage.clickOnOrdersLink();
+        customerInfoPage = ordersPage.clickOnCustomerInfoLink();
     }
 
     @AfterClass

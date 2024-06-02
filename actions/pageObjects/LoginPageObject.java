@@ -1,6 +1,7 @@
 package pageObjects;
 
 import commons.BasePage;
+import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import pageUIs.LoginPageUI;
 

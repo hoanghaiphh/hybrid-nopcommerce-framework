@@ -6,6 +6,8 @@ import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import pageObjects.*;
+import pageUIs.SidebarPageUI;
 
 import java.time.Duration;
 import java.util.List;
@@ -331,4 +333,29 @@ public class BasePage {
                 "return arguments[0].complete " + "&& typeof arguments[0].naturalWidth != 'undefined' && arguments[0].naturalWidth > 0",
                 getElement(driver, locator));
     }
+
+    public AddressesPageObject clickOnAddressesLink(WebDriver driver) {
+        waitForElementClickable(driver, SidebarPageUI.ADDRESSES_LINK);
+        clickOnElement(driver, SidebarPageUI.ADDRESSES_LINK);
+        return PageGenerator.getAddressesPage(driver);
+    }
+
+    public ChangePasswordPageObject clickOnChangePasswordLink(WebDriver driver) {
+        waitForElementClickable(driver, SidebarPageUI.CHANGE_PASSWORD_LINK);
+        clickOnElement(driver, SidebarPageUI.CHANGE_PASSWORD_LINK);
+        return PageGenerator.getChangePasswordPage(driver);
+    }
+
+    public CustomerInfoPageObject clickOnCustomerInfoLink(WebDriver driver) {
+        waitForElementClickable(driver, SidebarPageUI.CUSTOMER_INFO_LINK);
+        clickOnElement(driver, SidebarPageUI.CUSTOMER_INFO_LINK);
+        return PageGenerator.getCustomerInfoPage(driver);
+    }
+
+    public OrdersPageObject clickOnOrdersLink(WebDriver driver) {
+        waitForElementClickable(driver, SidebarPageUI.ORDERS_LINK);
+        clickOnElement(driver, SidebarPageUI.ORDERS_LINK);
+        return PageGenerator.getOrdersPage(driver);
+    }
+
 }

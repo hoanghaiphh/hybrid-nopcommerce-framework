@@ -2,6 +2,7 @@ package pageFactory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -16,6 +17,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='gender-male']")
+    @CacheLookup
     private WebElement genderMaleRadio;
 
     public void clickOnGenderRadio() {
@@ -24,6 +26,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='FirstName']")
+    @CacheLookup
     private WebElement firstNameTextbox;
 
     public void sendKeyToFirstnameTextbox(String firstName) {
@@ -32,6 +35,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='LastName']")
+    @CacheLookup
     private WebElement lastNameTextbox;
 
     public void sendKeyToLastnameTextbox(String lastName) {
@@ -40,6 +44,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//select[@name='DateOfBirthDay']")
+    @CacheLookup
     private WebElement dayDropdown;
 
     public void selectItemInDayDropdown(String dayOfBirth) {
@@ -48,6 +53,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//select[@name='DateOfBirthMonth']")
+    @CacheLookup
     private WebElement monthDropdown;
 
     public void selectItemInMonthDropdown(String monthOfBirth) {
@@ -56,6 +62,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//select[@name='DateOfBirthYear']")
+    @CacheLookup
     private WebElement yearDropdown;
 
     public void selectItemInYearDropdown(String yearOfBirth) {
@@ -64,6 +71,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='Email']")
+    @CacheLookup
     private WebElement emailTextbox;
 
     public void sendKeyToEmailTextbox(String emailAddress) {
@@ -72,6 +80,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='Company']")
+    @CacheLookup
     private WebElement companyTextbox;
 
     public void sendKeyToCompanyTextbox(String companyName) {
@@ -80,6 +89,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='Password']")
+    @CacheLookup
     private WebElement passwordTextbox;
 
     public void sendKeyToPasswordTextbox(String password) {
@@ -88,6 +98,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//input[@id='ConfirmPassword']")
+    @CacheLookup
     private WebElement confirmPasswordTextbox;
 
     public void sendKeyToConfirmPasswordTextbox(String password) {
@@ -96,6 +107,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//button[@id='register-button']")
+    @CacheLookup
     private WebElement registerButton;
 
     public void clickOnRegisterButton() {
@@ -104,6 +116,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//div[@class='result']")
+    @CacheLookup
     private WebElement registerSuccessMsg;
 
     public String getRegisterSuccessMessage() {
@@ -112,6 +125,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//a[@class='ico-logout']")
+    @CacheLookup
     private List<WebElement> logoutLink;
 
     public void clickOnLogoutLink() {
@@ -122,6 +136,7 @@ public class RegisterPageFactory extends BasePage {
     }
 
     @FindBy(xpath = "//a[@class='ico-login']")
+    @CacheLookup
     private WebElement loginLink;
 
     public void clickOnLoginLink() {

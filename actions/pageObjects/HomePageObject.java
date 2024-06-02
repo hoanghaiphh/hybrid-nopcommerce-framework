@@ -1,8 +1,8 @@
 package pageObjects;
 
 import commons.BasePage;
+import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.devtools.v85.page.Page;
 import pageUIs.HomePageUI;
 
 public class HomePageObject extends BasePage {

@@ -10,12 +10,15 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.*;
 
-public class Level_06_Page_Generator extends BaseTest {
+public class Level_07_Switch_Page_Object extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
     private CustomerInfoPageObject customerInfoPage;
+    private AddressesPageObject addressesPage;
+    private ChangePasswordPageObject changePasswordPage;
+    private OrdersPageObject ordersPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")
@@ -77,6 +80,15 @@ public class Level_06_Page_Generator extends BaseTest {
         Assert.assertEquals(customerInfoPage.getValueInMonthDropdown(), monthOfBirth);
         Assert.assertEquals(customerInfoPage.getValueInYearDropdown(), yearOfBirth);
         Assert.assertEquals(customerInfoPage.getValueInCompanyTextbox(), companyName);
+    }
+
+    @Test
+    public void User_04_Switch_Page() {
+        addressesPage = customerInfoPage.clickOnAddressesLink(driver);
+        customerInfoPage = addressesPage.clickOnCustomerInfoLink(driver);
+        changePasswordPage = customerInfoPage.clickOnChangePasswordLink(driver);
+        ordersPage = changePasswordPage.clickOnOrdersLink(driver);
+        customerInfoPage = ordersPage.clickOnCustomerInfoLink(driver);
     }
 
     @AfterClass

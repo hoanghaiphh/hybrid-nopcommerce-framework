@@ -11,10 +11,6 @@ import pageFactory.CustomerInfoPageFactory;
 import pageFactory.HomePageFactory;
 import pageFactory.LoginPageFactory;
 import pageFactory.RegisterPageFactory;
-import pageObjects.CustomerInfoPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
 
 public class Level_05_Page_Factory extends BaseTest {
     private WebDriver driver;

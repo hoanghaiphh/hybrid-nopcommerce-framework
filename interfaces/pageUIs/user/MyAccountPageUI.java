@@ -1,6 +1,6 @@
-package pageUIs;
+package pageUIs.user;
 
-public class SidebarPageUI {
+public class MyAccountPageUI {
     public static final String CUSTOMER_INFO_LINK = "//a[text()='Customer info']";
     public static final String ADDRESSES_LINK = "//div[contains(@class, 'block-account-navigation')]//a[text()='Addresses']";
     public static final String CHANGE_PASSWORD_LINK = "//div[contains(@class, 'block-account-navigation')]//a[text()='Change password']";

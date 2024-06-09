@@ -8,17 +8,21 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageObjects.user.*;
+import pageObjects.user.myAccount.AddressesPageObjectMyAccount;
+import pageObjects.user.myAccount.ChangePasswordPageObjectMyAccount;
+import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
+import pageObjects.user.myAccount.OrdersPageObjectMyAccount;
 
 public class Level_08_Page_Navigation extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
-    private CustomerInfoPageObject customerInfoPage;
-    private AddressesPageObject addressesPage;
-    private ChangePasswordPageObject changePasswordPage;
-    private OrdersPageObject ordersPage;
+    private CustomerInfoPageObjectMyAccount customerInfoPage;
+    private AddressesPageObjectMyAccount addressesPage;
+    private ChangePasswordPageObjectMyAccount changePasswordPage;
+    private OrdersPageObjectMyAccount ordersPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")
@@ -60,7 +64,7 @@ public class Level_08_Page_Navigation extends BaseTest {
 
     @Test
     public void User_02_Login() {
-        registerPage.clickOnLogoutLink(); // the page should always do 1 fixed action (auto login or logout after registering) --> this is a bug
+        registerPage.clickOnLogoutLink(); // the page should always do 1 fixed action: auto login/ not auto login after registering --> this is a bug
 
         loginPage = registerPage.clickOnLoginLink();
 

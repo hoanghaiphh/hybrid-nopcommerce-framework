@@ -8,17 +8,21 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.*;
+import pageObjects.user.*;
+import pageObjects.user.myAccount.AddressesPageObjectMyAccount;
+import pageObjects.user.myAccount.ChangePasswordPageObjectMyAccount;
+import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
+import pageObjects.user.myAccount.OrdersPageObjectMyAccount;
 
 public class Level_07_Switch_Page_Object extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
-    private CustomerInfoPageObject customerInfoPage;
-    private AddressesPageObject addressesPage;
-    private ChangePasswordPageObject changePasswordPage;
-    private OrdersPageObject ordersPage;
+    private CustomerInfoPageObjectMyAccount customerInfoPage;
+    private AddressesPageObjectMyAccount addressesPage;
+    private ChangePasswordPageObjectMyAccount changePasswordPage;
+    private OrdersPageObjectMyAccount ordersPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")
@@ -84,11 +88,11 @@ public class Level_07_Switch_Page_Object extends BaseTest {
 
     @Test
     public void User_04_Switch_Page() {
-        addressesPage = customerInfoPage.clickOnAddressesLink(driver);
-        customerInfoPage = addressesPage.clickOnCustomerInfoLink(driver);
-        changePasswordPage = customerInfoPage.clickOnChangePasswordLink(driver);
-        ordersPage = changePasswordPage.clickOnOrdersLink(driver);
-        customerInfoPage = ordersPage.clickOnCustomerInfoLink(driver);
+        addressesPage = customerInfoPage.clickOnAddressesLink();
+        customerInfoPage = addressesPage.clickOnCustomerInfoLink();
+        changePasswordPage = customerInfoPage.clickOnChangePasswordLink();
+        ordersPage = changePasswordPage.clickOnOrdersLink();
+        customerInfoPage = ordersPage.clickOnCustomerInfoLink();
     }
 
     @AfterClass

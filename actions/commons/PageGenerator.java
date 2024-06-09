@@ -1,7 +1,13 @@
 package commons;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.*;
+import pageObjects.admin.DashboardAdminPageObject;
+import pageObjects.admin.LoginAdminPageObject;
+import pageObjects.user.*;
+import pageObjects.user.myAccount.AddressesPageObjectMyAccount;
+import pageObjects.user.myAccount.ChangePasswordPageObjectMyAccount;
+import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
+import pageObjects.user.myAccount.OrdersPageObjectMyAccount;
 
 public class PageGenerator {
     public static LoginPageObject getLoginPage(WebDriver driver) {
@@ -16,19 +22,27 @@ public class PageGenerator {
         return new HomePageObject(driver);
     }
 
-    public static CustomerInfoPageObject getCustomerInfoPage(WebDriver driver) {
-        return new CustomerInfoPageObject(driver);
+    public static CustomerInfoPageObjectMyAccount getCustomerInfoPage(WebDriver driver) {
+        return new CustomerInfoPageObjectMyAccount(driver);
     }
 
-    public static AddressesPageObject getAddressesPage(WebDriver driver) {
-        return new AddressesPageObject(driver);
+    public static AddressesPageObjectMyAccount getAddressesPage(WebDriver driver) {
+        return new AddressesPageObjectMyAccount(driver);
     }
 
-    public static ChangePasswordPageObject getChangePasswordPage(WebDriver driver) {
-        return new ChangePasswordPageObject(driver);
+    public static ChangePasswordPageObjectMyAccount getChangePasswordPage(WebDriver driver) {
+        return new ChangePasswordPageObjectMyAccount(driver);
     }
 
-    public static OrdersPageObject getOrdersPage(WebDriver driver) {
-        return new OrdersPageObject(driver);
+    public static OrdersPageObjectMyAccount getOrdersPage(WebDriver driver) {
+        return new OrdersPageObjectMyAccount(driver);
+    }
+
+    public static DashboardAdminPageObject getDashboardAdminPage(WebDriver driver) {
+        return new DashboardAdminPageObject(driver);
+    }
+
+    public static LoginAdminPageObject getLoginAdminPage(WebDriver driver) {
+        return new LoginAdminPageObject(driver);
     }
 }

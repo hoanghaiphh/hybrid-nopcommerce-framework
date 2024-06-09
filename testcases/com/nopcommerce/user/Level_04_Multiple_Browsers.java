@@ -2,25 +2,22 @@ package com.nopcommerce.user;
 
 import commons.BaseTest;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.CustomerInfoPageObject;
-import pageObjects.HomePageObject;
-import pageObjects.LoginPageObject;
-import pageObjects.RegisterPageObject;
-
-import java.time.Duration;
+import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.LoginPageObject;
+import pageObjects.user.RegisterPageObject;
 
 public class Level_04_Multiple_Browsers extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
-    private CustomerInfoPageObject customerInfoPage;
+    private CustomerInfoPageObjectMyAccount customerInfoPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")
@@ -81,7 +78,7 @@ public class Level_04_Multiple_Browsers extends BaseTest {
     public void User_03_MyAccount() {
         homePage.clickOnMyAccountLink();
 
-        customerInfoPage = new CustomerInfoPageObject(driver);
+        customerInfoPage = new CustomerInfoPageObjectMyAccount(driver);
 
         Assert.assertTrue(customerInfoPage.isGenderMaleSelected());
         Assert.assertEquals(customerInfoPage.getValueInFirstnameTextbox(), firstName);

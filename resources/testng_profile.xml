@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="NopCommerce Automation Testing">
+
+    <test name="Run on Chrome browser with Profile">
+        <parameter name="browser" value="Chrome_Profile"/>
+        <classes>
+            <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
+        </classes>
+    </test>
+
+</suite>

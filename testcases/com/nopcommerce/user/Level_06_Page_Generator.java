@@ -8,7 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
+import pageObjects.user.myAccount.CustomerInfoPageObject;
 import pageObjects.user.HomePageObject;
 import pageObjects.user.LoginPageObject;
 import pageObjects.user.RegisterPageObject;
@@ -18,7 +18,7 @@ public class Level_06_Page_Generator extends BaseTest {
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
-    private CustomerInfoPageObjectMyAccount customerInfoPage;
+    private CustomerInfoPageObject customerInfoPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")

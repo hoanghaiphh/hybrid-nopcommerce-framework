@@ -2,22 +2,22 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="NopCommerce Automation Testing">
 
-    <test name="Run on Firefox browser">
-        <parameter name="browser" value="Firefox"/>
+    <test name="Run on headless Firefox browser">
+        <parameter name="browser" value="Firefox_Headless"/>
         <classes>
             <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
         </classes>
     </test>
 
-    <test name="Run on Chrome browser">
-        <parameter name="browser" value="Chrome"/>
+    <test name="Run on headless Chrome browser">
+        <parameter name="browser" value="Chrome_Headless"/>
         <classes>
             <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
         </classes>
     </test>
 
-    <test name="Run on Edge browser">
-        <parameter name="browser" value="Edge"/>
+    <test name="Run on headless Edge browser">
+        <parameter name="browser" value="Edge_Headless"/>
         <classes>
             <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
         </classes>

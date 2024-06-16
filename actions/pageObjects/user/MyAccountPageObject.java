@@ -2,10 +2,10 @@ package pageObjects.user;
 
 import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
-import pageObjects.user.myAccount.AddressesPageObjectMyAccount;
-import pageObjects.user.myAccount.ChangePasswordPageObjectMyAccount;
-import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
-import pageObjects.user.myAccount.OrdersPageObjectMyAccount;
+import pageObjects.user.myAccount.AddressesPageObject;
+import pageObjects.user.myAccount.ChangePasswordPageObject;
+import pageObjects.user.myAccount.CustomerInfoPageObject;
+import pageObjects.user.myAccount.OrdersPageObject;
 import pageUIs.user.MyAccountPageUI;
 
 public class MyAccountPageObject extends BasePageObject {
@@ -16,27 +16,45 @@ public class MyAccountPageObject extends BasePageObject {
         this.driver = driver;
     }
 
-    public AddressesPageObjectMyAccount clickOnAddressesLink() {
+    public AddressesPageObject clickOnAddressesLink() {
         waitForElementClickable(driver, MyAccountPageUI.ADDRESSES_LINK);
         clickOnElement(driver, MyAccountPageUI.ADDRESSES_LINK);
         return PageGenerator.getAddressesPage(driver);
     }
 
-    public ChangePasswordPageObjectMyAccount clickOnChangePasswordLink() {
+    public ChangePasswordPageObject clickOnChangePasswordLink() {
         waitForElementClickable(driver, MyAccountPageUI.CHANGE_PASSWORD_LINK);
         clickOnElement(driver, MyAccountPageUI.CHANGE_PASSWORD_LINK);
         return PageGenerator.getChangePasswordPage(driver);
     }
 
-    public CustomerInfoPageObjectMyAccount clickOnCustomerInfoLink() {
+    public CustomerInfoPageObject clickOnCustomerInfoLink() {
         waitForElementClickable(driver, MyAccountPageUI.CUSTOMER_INFO_LINK);
         clickOnElement(driver, MyAccountPageUI.CUSTOMER_INFO_LINK);
         return PageGenerator.getCustomerInfoPage(driver);
     }
 
-    public OrdersPageObjectMyAccount clickOnOrdersLink() {
+    public OrdersPageObject clickOnOrdersLink() {
         waitForElementClickable(driver, MyAccountPageUI.ORDERS_LINK);
         clickOnElement(driver, MyAccountPageUI.ORDERS_LINK);
         return PageGenerator.getOrdersPage(driver);
     }
+
+    public MyAccountPageObject clickOnSidebarLink(String pageName) {
+        waitForElementClickable(driver, MyAccountPageUI.SIDEBAR_DYNAMIC_LINK, pageName);
+        clickOnElement(driver, MyAccountPageUI.SIDEBAR_DYNAMIC_LINK, pageName);
+        return switch (pageName) {
+            case ("Addresses") -> PageGenerator.getAddressesPage(driver);
+            case ("Change password") -> PageGenerator.getChangePasswordPage(driver);
+            case ("Customer info") -> PageGenerator.getCustomerInfoPage(driver);
+            case ("Orders") -> PageGenerator.getOrdersPage(driver);
+            default -> throw new RuntimeException("Page name is not valid !!!");
+        };
+    }
+
+    public void clickOnSidebarLink2(String pageName) {
+        waitForElementClickable(driver, MyAccountPageUI.SIDEBAR_DYNAMIC_LINK, pageName);
+        clickOnElement(driver, MyAccountPageUI.SIDEBAR_DYNAMIC_LINK, pageName);
+    }
+
 }

@@ -3,7 +3,7 @@ package pageObjects.user;
 import commons.BasePage;
 import commons.PageGenerator;
 import org.openqa.selenium.WebDriver;
-import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
+import pageObjects.user.myAccount.CustomerInfoPageObject;
 import pageUIs.user.BasePageUI;
 
 public class BasePageObject extends BasePage {
@@ -24,7 +24,7 @@ public class BasePageObject extends BasePage {
         return isElementDisplayed(driver, BasePageUI.MY_ACCOUNT_LINK);
     }
 
-    public CustomerInfoPageObjectMyAccount clickOnMyAccountLink() {
+    public CustomerInfoPageObject clickOnMyAccountLink() {
         waitForElementClickable(driver, BasePageUI.MY_ACCOUNT_LINK);
         clickOnElement(driver, BasePageUI.MY_ACCOUNT_LINK);
         return PageGenerator.getCustomerInfoPage(driver);
@@ -42,5 +42,17 @@ public class BasePageObject extends BasePage {
             clickOnElement(driver, BasePageUI.LOGOUT_LINK);
         }
         return PageGenerator.getHomePage(driver);
+    }
+
+    public BasePageObject clickOnHeaderLink(String pageName) {
+        waitForElementClickable(driver, BasePageUI.HEADER_DYNAMIC_LINK, pageName);
+        clickOnElement(driver, BasePageUI.HEADER_DYNAMIC_LINK, pageName);
+        return switch (pageName) {
+            case ("Register") -> PageGenerator.getRegisterPage(driver);
+            case ("My account") -> PageGenerator.getCustomerInfoPage(driver);
+            case ("Log in") -> PageGenerator.getLoginPage(driver);
+            case ("Log out") -> PageGenerator.getHomePage(driver);
+            default -> throw new RuntimeException("Page name is not valid !!!");
+        };
     }
 }

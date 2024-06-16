@@ -4,10 +4,10 @@ import org.openqa.selenium.WebDriver;
 import pageObjects.user.MyAccountPageObject;
 import pageUIs.user.myAccount.CustomerInfoPageUI;
 
-public class CustomerInfoPageObjectMyAccount extends MyAccountPageObject {
+public class CustomerInfoPageObject extends MyAccountPageObject {
     private WebDriver driver;
 
-    public CustomerInfoPageObjectMyAccount(WebDriver driver) {
+    public CustomerInfoPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }

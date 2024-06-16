@@ -11,13 +11,15 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.admin.DashboardAdminPageObject;
 import pageObjects.admin.LoginAdminPageObject;
-import pageObjects.user.*;
+import pageObjects.user.HomePageObject;
+import pageObjects.user.LoginPageObject;
+import pageObjects.user.RegisterPageObject;
 import pageObjects.user.myAccount.AddressesPageObject;
 import pageObjects.user.myAccount.ChangePasswordPageObject;
 import pageObjects.user.myAccount.CustomerInfoPageObject;
 import pageObjects.user.myAccount.OrdersPageObject;
 
-public class Level_09_Switch_Site_Url extends BaseTest {
+public class Level_10_Dynamic_Locator extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
@@ -47,7 +49,7 @@ public class Level_09_Switch_Site_Url extends BaseTest {
         // Register (Pre-conditions)
         homePage = PageGenerator.getHomePage(driver);
 
-        registerPage = homePage.clickOnRegisterLink();
+        registerPage = (RegisterPageObject) homePage.clickOnHeaderLink("Register");
         registerPage.clickOnGenderRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
@@ -61,12 +63,12 @@ public class Level_09_Switch_Site_Url extends BaseTest {
         registerPage.clickOnRegisterButton();
         Assert.assertEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
 
-        homePage = registerPage.clickOnLogoutLink();
+        homePage = (HomePageObject) registerPage.clickOnHeaderLink("Log out");
     }
 
     @Test
     public void User_01_Login() {
-        loginPage = homePage.clickOnLoginLink();
+        loginPage = (LoginPageObject) homePage.clickOnHeaderLink("Log in");
 
         homePage = loginPage.loginToSystem(emailAddress, password);
         Assert.assertTrue(homePage.isMyAccountLinkDisplayed());
@@ -74,7 +76,7 @@ public class Level_09_Switch_Site_Url extends BaseTest {
 
     @Test
     public void User_02_MyAccount() {
-        customerInfoPage = homePage.clickOnMyAccountLink();
+        customerInfoPage = (CustomerInfoPageObject) homePage.clickOnHeaderLink("My account");
 
         Assert.assertTrue(customerInfoPage.isGenderMaleSelected());
         Assert.assertEquals(customerInfoPage.getValueInFirstnameTextbox(), firstName);
@@ -86,12 +88,30 @@ public class Level_09_Switch_Site_Url extends BaseTest {
     }
 
     @Test
-    public void User_03_Switch_Page() {
-        addressesPage = customerInfoPage.clickOnAddressesLink();
-        customerInfoPage = addressesPage.clickOnCustomerInfoLink();
-        changePasswordPage = customerInfoPage.clickOnChangePasswordLink();
-        ordersPage = changePasswordPage.clickOnOrdersLink();
-        customerInfoPage = ordersPage.clickOnCustomerInfoLink();
+    public void User_03a_Switch_Page() {
+        addressesPage = (AddressesPageObject) customerInfoPage.clickOnSidebarLink("Addresses");
+        customerInfoPage = (CustomerInfoPageObject) addressesPage.clickOnSidebarLink("Customer info");
+        changePasswordPage = (ChangePasswordPageObject) customerInfoPage.clickOnSidebarLink("Change password");
+        ordersPage = (OrdersPageObject) changePasswordPage.clickOnSidebarLink("Orders");
+        customerInfoPage = (CustomerInfoPageObject) ordersPage.clickOnSidebarLink("Customer info");
+    }
+
+    @Test
+    public void User_03b_Switch_Page() {
+        customerInfoPage.clickOnSidebarLink2("Addresses");
+        addressesPage = PageGenerator.getAddressesPage(driver);
+
+        addressesPage.clickOnSidebarLink2("Customer info");
+        customerInfoPage = PageGenerator.getCustomerInfoPage(driver);
+
+        customerInfoPage.clickOnSidebarLink2("Change password");
+        changePasswordPage = PageGenerator.getChangePasswordPage(driver);
+
+        changePasswordPage.clickOnSidebarLink2("Orders");
+        ordersPage = PageGenerator.getOrdersPage(driver);
+
+        ordersPage.clickOnSidebarLink2("Customer info");
+        customerInfoPage = PageGenerator.getCustomerInfoPage(driver);
     }
 
     @Test
@@ -107,9 +127,9 @@ public class Level_09_Switch_Site_Url extends BaseTest {
 
         homePage.openPageUrl(driver, GlobalConstants.ADMIN_URL);
         dashboardAdminPage = PageGenerator.getDashboardAdminPage(driver);
-        dashboardAdminPage.clickOnSalesLink();
-        dashboardAdminPage.clickOnPromotionsLink();
-        dashboardAdminPage.clickOnCustomersLink();
+        dashboardAdminPage.clickOnSidebarLink("Sales");
+        dashboardAdminPage.clickOnSidebarLink("Promotions");
+        dashboardAdminPage.clickOnSidebarLink("Customers");
 
         dashboardAdminPage.openPageUrl(driver, GlobalConstants.USER_URL);
         homePage = PageGenerator.getHomePage(driver);

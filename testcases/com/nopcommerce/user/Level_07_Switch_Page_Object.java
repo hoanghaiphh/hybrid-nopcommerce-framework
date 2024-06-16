@@ -9,20 +9,20 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pageObjects.user.*;
-import pageObjects.user.myAccount.AddressesPageObjectMyAccount;
-import pageObjects.user.myAccount.ChangePasswordPageObjectMyAccount;
-import pageObjects.user.myAccount.CustomerInfoPageObjectMyAccount;
-import pageObjects.user.myAccount.OrdersPageObjectMyAccount;
+import pageObjects.user.myAccount.AddressesPageObject;
+import pageObjects.user.myAccount.ChangePasswordPageObject;
+import pageObjects.user.myAccount.CustomerInfoPageObject;
+import pageObjects.user.myAccount.OrdersPageObject;
 
 public class Level_07_Switch_Page_Object extends BaseTest {
     private WebDriver driver;
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
-    private CustomerInfoPageObjectMyAccount customerInfoPage;
-    private AddressesPageObjectMyAccount addressesPage;
-    private ChangePasswordPageObjectMyAccount changePasswordPage;
-    private OrdersPageObjectMyAccount ordersPage;
+    private CustomerInfoPageObject customerInfoPage;
+    private AddressesPageObject addressesPage;
+    private ChangePasswordPageObject changePasswordPage;
+    private OrdersPageObject ordersPage;
     private String firstName, lastName, dayOfBirth, monthOfBirth, yearOfBirth, emailAddress, companyName, password;
 
     @Parameters("browser")

@@ -12,13 +12,15 @@ public class LoginAdminPageObject extends BasePage {
         this.driver = driver;
     }
 
-    public void sendKeyToEmailTextbox(String emailAddress) {
+    public void enterEmail(String emailAddress) {
         waitForElementVisible(driver, LoginAdminPageUI.EMAIL_TEXTBOX);
+        clearElementText(driver, LoginAdminPageUI.EMAIL_TEXTBOX);
         sendKeyToElement(driver, LoginAdminPageUI.EMAIL_TEXTBOX, emailAddress);
     }
 
-    public void sendKeyToPasswordTextbox(String password) {
+    public void enterPassword(String password) {
         waitForElementVisible(driver, LoginAdminPageUI.PASSWORD_TEXTBOX);
+        clearElementText(driver, LoginAdminPageUI.PASSWORD_TEXTBOX);
         sendKeyToElement(driver, LoginAdminPageUI.PASSWORD_TEXTBOX, password);
     }
 
@@ -28,10 +30,9 @@ public class LoginAdminPageObject extends BasePage {
     }
 
     public DashboardAdminPageObject loginToSystem(String emailAddress, String password) {
-        sendKeyToEmailTextbox(emailAddress);
-        sendKeyToPasswordTextbox(password);
+        enterEmail(emailAddress);
+        enterPassword(password);
         clickOnLoginButton();
         return PageGenerator.getDashboardAdminPage(driver);
     }
-
 }

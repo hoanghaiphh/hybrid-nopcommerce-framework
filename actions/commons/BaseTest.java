@@ -21,17 +21,29 @@ public class BaseTest {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
         switch (browserList) {
             case FIREFOX:
+                driver = new FirefoxDriver();
+                break;
+            case CHROME:
+                driver = new ChromeDriver();
+                break;
+            case EDGE:
+                driver = new EdgeDriver();
+                break;
+            case FIREFOX_HEADLESS:
                 firefoxOptions.addArguments("--headless");
                 driver = new FirefoxDriver(firefoxOptions);
                 break;
-            case CHROME:
-                // chromeOptions.addArguments("--headless=new");
-                // chromeOptions.addArguments("--user-data-dir=C:\\Users\\HAIPH\\AppData\\Local\\Google\\Chrome\\User Data\\").addArguments("--profile-directory=Default");
+            case CHROME_HEADLESS:
+                chromeOptions.addArguments("--headless=new");
                 driver = new ChromeDriver(chromeOptions);
                 break;
-            case EDGE:
+            case EDGE_HEADLESS:
                 edgeOptions.addArguments("--headless=new");
                 driver = new EdgeDriver(edgeOptions);
+                break;
+            case CHROME_PROFILE:
+                chromeOptions.addArguments("--user-data-dir=C:\\Users\\HAIPH\\AppData\\Local\\Google\\Chrome\\User Data\\").addArguments("--profile-directory=Default");
+                driver = new ChromeDriver(chromeOptions);
                 break;
             default:
                 throw new RuntimeException("Browser is not valid");

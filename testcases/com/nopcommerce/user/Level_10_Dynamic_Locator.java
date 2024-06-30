@@ -2,22 +2,22 @@ package com.nopcommerce.user;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import commons.PageGenerator;
+import pageObjects.nopcommerce.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.admin.DashboardAdminPageObject;
-import pageObjects.admin.LoginAdminPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.LoginPageObject;
-import pageObjects.user.RegisterPageObject;
-import pageObjects.user.myAccount.AddressesPageObject;
-import pageObjects.user.myAccount.ChangePasswordPageObject;
-import pageObjects.user.myAccount.CustomerInfoPageObject;
-import pageObjects.user.myAccount.OrdersPageObject;
+import pageObjects.nopcommerce.admin.DashboardAdminPageObject;
+import pageObjects.nopcommerce.admin.LoginAdminPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.LoginPageObject;
+import pageObjects.nopcommerce.user.RegisterPageObject;
+import pageObjects.nopcommerce.user.myAccount.AddressesPageObject;
+import pageObjects.nopcommerce.user.myAccount.ChangePasswordPageObject;
+import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
+import pageObjects.nopcommerce.user.myAccount.OrdersPageObject;
 
 public class Level_10_Dynamic_Locator extends BaseTest {
     private WebDriver driver;
@@ -89,8 +89,20 @@ public class Level_10_Dynamic_Locator extends BaseTest {
 
     @Test
     public void User_03a_Switch_Page() {
-        addressesPage = (AddressesPageObject) customerInfoPage.clickOnSidebarLink("Addresses");
-        customerInfoPage = (CustomerInfoPageObject) addressesPage.clickOnSidebarLink("Customer info");
+//        ClassCastException solution #1
+        if (customerInfoPage.clickOnSidebarLink("Addresses") instanceof AddressesPageObject) {
+            addressesPage = (AddressesPageObject) customerInfoPage.clickOnSidebarLink("Addresses");
+        } else {
+            System.out.println("Cannot cast to SubClass");
+        }
+
+//        ClassCastException solution #2
+        try {
+            customerInfoPage = (CustomerInfoPageObject) addressesPage.clickOnSidebarLink("Customer info");
+        } catch (ClassCastException e) {
+            System.out.println("Cannot cast to SubClass: " + e.getMessage());
+        }
+
         changePasswordPage = (ChangePasswordPageObject) customerInfoPage.clickOnSidebarLink("Change password");
         ordersPage = (OrdersPageObject) changePasswordPage.clickOnSidebarLink("Orders");
         customerInfoPage = (CustomerInfoPageObject) ordersPage.clickOnSidebarLink("Customer info");

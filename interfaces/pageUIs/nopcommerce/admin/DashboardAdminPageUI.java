@@ -1,4 +1,4 @@
-package pageUIs.admin;
+package pageUIs.nopcommerce.admin;
 
 public class DashboardAdminPageUI {
     public static final String LOGOUT_LINK = "xpath=//a[text()='Logout']";

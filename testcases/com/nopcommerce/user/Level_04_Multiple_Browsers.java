@@ -7,10 +7,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import pageObjects.user.myAccount.CustomerInfoPageObject;
-import pageObjects.user.HomePageObject;
-import pageObjects.user.LoginPageObject;
-import pageObjects.user.RegisterPageObject;
+import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.LoginPageObject;
+import pageObjects.nopcommerce.user.RegisterPageObject;
 
 public class Level_04_Multiple_Browsers extends BaseTest {
     private WebDriver driver;

@@ -49,7 +49,13 @@ public class BaseTest {
                 throw new RuntimeException("Browser is not valid");
         }
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
+        return driver;
+    }
+
+    protected WebDriver openBrowserWithUrl(String browserName, String url) {
+        driver = getBrowserDriver(browserName);
+        driver.get(url);
         return driver;
     }
 

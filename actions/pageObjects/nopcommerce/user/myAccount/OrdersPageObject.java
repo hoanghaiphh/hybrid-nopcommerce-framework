@@ -1,7 +1,7 @@
-package pageObjects.user.myAccount;
+package pageObjects.nopcommerce.user.myAccount;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.user.MyAccountPageObject;
+import pageObjects.nopcommerce.user.MyAccountPageObject;
 
 public class OrdersPageObject extends MyAccountPageObject {
     private WebDriver driver;

@@ -1,13 +1,15 @@
-package commons;
+package pageObjects.nopcommerce;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.admin.DashboardAdminPageObject;
-import pageObjects.admin.LoginAdminPageObject;
-import pageObjects.user.*;
-import pageObjects.user.myAccount.AddressesPageObject;
-import pageObjects.user.myAccount.ChangePasswordPageObject;
-import pageObjects.user.myAccount.CustomerInfoPageObject;
-import pageObjects.user.myAccount.OrdersPageObject;
+import pageObjects.nopcommerce.admin.DashboardAdminPageObject;
+import pageObjects.nopcommerce.admin.LoginAdminPageObject;
+import pageObjects.nopcommerce.user.HomePageObject;
+import pageObjects.nopcommerce.user.LoginPageObject;
+import pageObjects.nopcommerce.user.RegisterPageObject;
+import pageObjects.nopcommerce.user.myAccount.AddressesPageObject;
+import pageObjects.nopcommerce.user.myAccount.ChangePasswordPageObject;
+import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
+import pageObjects.nopcommerce.user.myAccount.OrdersPageObject;
 
 public class PageGenerator {
     public static LoginPageObject getLoginPage(WebDriver driver) {

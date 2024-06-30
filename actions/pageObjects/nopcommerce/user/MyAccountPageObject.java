@@ -1,12 +1,12 @@
-package pageObjects.user;
+package pageObjects.nopcommerce.user;
 
-import commons.PageGenerator;
+import pageObjects.nopcommerce.PageGenerator;
 import org.openqa.selenium.WebDriver;
-import pageObjects.user.myAccount.AddressesPageObject;
-import pageObjects.user.myAccount.ChangePasswordPageObject;
-import pageObjects.user.myAccount.CustomerInfoPageObject;
-import pageObjects.user.myAccount.OrdersPageObject;
-import pageUIs.user.MyAccountPageUI;
+import pageObjects.nopcommerce.user.myAccount.AddressesPageObject;
+import pageObjects.nopcommerce.user.myAccount.ChangePasswordPageObject;
+import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
+import pageObjects.nopcommerce.user.myAccount.OrdersPageObject;
+import pageUIs.nopcommerce.user.MyAccountPageUI;
 
 public class MyAccountPageObject extends BasePageObject {
     private WebDriver driver;

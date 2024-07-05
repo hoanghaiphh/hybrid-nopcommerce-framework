@@ -15,13 +15,13 @@ public class LoginAdminPageObject extends BasePage {
     public void enterEmail(String emailAddress) {
         waitForElementVisible(driver, LoginAdminPageUI.EMAIL_TEXTBOX);
         clearElementText(driver, LoginAdminPageUI.EMAIL_TEXTBOX);
-        sendKeyToElement(driver, LoginAdminPageUI.EMAIL_TEXTBOX, emailAddress);
+        sendKeysToElement(driver, LoginAdminPageUI.EMAIL_TEXTBOX, emailAddress);
     }
 
     public void enterPassword(String password) {
         waitForElementVisible(driver, LoginAdminPageUI.PASSWORD_TEXTBOX);
         clearElementText(driver, LoginAdminPageUI.PASSWORD_TEXTBOX);
-        sendKeyToElement(driver, LoginAdminPageUI.PASSWORD_TEXTBOX, password);
+        sendKeysToElement(driver, LoginAdminPageUI.PASSWORD_TEXTBOX, password);
     }
 
     public void clickOnLoginButton() {

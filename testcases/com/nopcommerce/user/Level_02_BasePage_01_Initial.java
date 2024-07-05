@@ -48,17 +48,17 @@ public class Level_02_BasePage_01_Initial {
         basePage.waitForElementClickable(driver, "//input[@id='gender-male']");
         basePage.clickOnElement(driver, "//input[@id='gender-male']");
 
-        basePage.sendKeyToElement(driver, "//input[@id='FirstName']", firstName);
-        basePage.sendKeyToElement(driver, "//input[@id='LastName']", lastName);
+        basePage.sendKeysToElement(driver, "//input[@id='FirstName']", firstName);
+        basePage.sendKeysToElement(driver, "//input[@id='LastName']", lastName);
 
-        basePage.selectItemInDropdown(driver, "//select[@name='DateOfBirthDay']", dayOfBirth);
-        basePage.selectItemInDropdown(driver, "//select[@name='DateOfBirthMonth']", monthOfBirth);
-        basePage.selectItemInDropdown(driver, "//select[@name='DateOfBirthYear']", yearOfBirth);
+        basePage.selectOptionInDropdown(driver, "//select[@name='DateOfBirthDay']", dayOfBirth);
+        basePage.selectOptionInDropdown(driver, "//select[@name='DateOfBirthMonth']", monthOfBirth);
+        basePage.selectOptionInDropdown(driver, "//select[@name='DateOfBirthYear']", yearOfBirth);
 
-        basePage.sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
-        basePage.sendKeyToElement(driver, "//input[@id='Company']", companyName);
-        basePage.sendKeyToElement(driver, "//input[@id='Password']", password);
-        basePage.sendKeyToElement(driver, "//input[@id='ConfirmPassword']", password);
+        basePage.sendKeysToElement(driver, "//input[@id='Email']", emailAddress);
+        basePage.sendKeysToElement(driver, "//input[@id='Company']", companyName);
+        basePage.sendKeysToElement(driver, "//input[@id='Password']", password);
+        basePage.sendKeysToElement(driver, "//input[@id='ConfirmPassword']", password);
 
         basePage.waitForElementClickable(driver, "//button[@id='register-button']");
         basePage.clickOnElement(driver, "//button[@id='register-button']");
@@ -71,8 +71,8 @@ public class Level_02_BasePage_01_Initial {
         basePage.waitForElementClickable(driver, "//a[@class='ico-login']");
         basePage.clickOnElement(driver, "//a[@class='ico-login']");
 
-        basePage.sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
-        basePage.sendKeyToElement(driver, "//input[@id='Password']", password);
+        basePage.sendKeysToElement(driver, "//input[@id='Email']", emailAddress);
+        basePage.sendKeysToElement(driver, "//input[@id='Password']", password);
 
         basePage.waitForElementClickable(driver, "//button[@class='button-1 login-button']");
         basePage.clickOnElement(driver, "//button[@class='button-1 login-button']");
@@ -90,9 +90,9 @@ public class Level_02_BasePage_01_Initial {
         Assert.assertEquals(basePage.getAttributeValue(driver, "//input[@id='FirstName']", "value"), firstName);
         Assert.assertEquals(basePage.getAttributeValue(driver, "//input[@id='LastName']", "value"), lastName);
 
-        Assert.assertEquals(basePage.getSelectedItemInDropdown(driver, "//select[@name='DateOfBirthDay']"), dayOfBirth);
-        Assert.assertEquals(basePage.getSelectedItemInDropdown(driver, "//select[@name='DateOfBirthMonth']"), monthOfBirth);
-        Assert.assertEquals(basePage.getSelectedItemInDropdown(driver, "//select[@name='DateOfBirthYear']"), yearOfBirth);
+        Assert.assertEquals(basePage.getSelectedOptionInDropdown(driver, "//select[@name='DateOfBirthDay']"), dayOfBirth);
+        Assert.assertEquals(basePage.getSelectedOptionInDropdown(driver, "//select[@name='DateOfBirthMonth']"), monthOfBirth);
+        Assert.assertEquals(basePage.getSelectedOptionInDropdown(driver, "//select[@name='DateOfBirthYear']"), yearOfBirth);
 
         Assert.assertEquals(basePage.getAttributeValue(driver, "//input[@id='Company']", "value"), companyName);
     }

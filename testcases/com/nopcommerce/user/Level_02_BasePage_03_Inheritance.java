@@ -45,17 +45,17 @@ public class Level_02_BasePage_03_Inheritance extends BasePage {
         waitForElementClickable(driver, "//input[@id='gender-male']");
         clickOnElement(driver, "//input[@id='gender-male']");
 
-        sendKeyToElement(driver, "//input[@id='FirstName']", firstName);
-        sendKeyToElement(driver, "//input[@id='LastName']", lastName);
+        sendKeysToElement(driver, "//input[@id='FirstName']", firstName);
+        sendKeysToElement(driver, "//input[@id='LastName']", lastName);
 
-        selectItemInDropdown(driver, "//select[@name='DateOfBirthDay']", dayOfBirth);
-        selectItemInDropdown(driver, "//select[@name='DateOfBirthMonth']", monthOfBirth);
-        selectItemInDropdown(driver, "//select[@name='DateOfBirthYear']", yearOfBirth);
+        selectOptionInDropdown(driver, "//select[@name='DateOfBirthDay']", dayOfBirth);
+        selectOptionInDropdown(driver, "//select[@name='DateOfBirthMonth']", monthOfBirth);
+        selectOptionInDropdown(driver, "//select[@name='DateOfBirthYear']", yearOfBirth);
 
-        sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
-        sendKeyToElement(driver, "//input[@id='Company']", companyName);
-        sendKeyToElement(driver, "//input[@id='Password']", password);
-        sendKeyToElement(driver, "//input[@id='ConfirmPassword']", password);
+        sendKeysToElement(driver, "//input[@id='Email']", emailAddress);
+        sendKeysToElement(driver, "//input[@id='Company']", companyName);
+        sendKeysToElement(driver, "//input[@id='Password']", password);
+        sendKeysToElement(driver, "//input[@id='ConfirmPassword']", password);
 
         waitForElementClickable(driver, "//button[@id='register-button']");
         clickOnElement(driver, "//button[@id='register-button']");
@@ -68,8 +68,8 @@ public class Level_02_BasePage_03_Inheritance extends BasePage {
         waitForElementClickable(driver, "//a[@class='ico-login']");
         clickOnElement(driver, "//a[@class='ico-login']");
 
-        sendKeyToElement(driver, "//input[@id='Email']", emailAddress);
-        sendKeyToElement(driver, "//input[@id='Password']", password);
+        sendKeysToElement(driver, "//input[@id='Email']", emailAddress);
+        sendKeysToElement(driver, "//input[@id='Password']", password);
 
         waitForElementClickable(driver, "//button[@class='button-1 login-button']");
         clickOnElement(driver, "//button[@class='button-1 login-button']");
@@ -87,9 +87,9 @@ public class Level_02_BasePage_03_Inheritance extends BasePage {
         Assert.assertEquals(getAttributeValue(driver, "//input[@id='FirstName']", "value"), firstName);
         Assert.assertEquals(getAttributeValue(driver, "//input[@id='LastName']", "value"), lastName);
 
-        Assert.assertEquals(getSelectedItemInDropdown(driver, "//select[@name='DateOfBirthDay']"), dayOfBirth);
-        Assert.assertEquals(getSelectedItemInDropdown(driver, "//select[@name='DateOfBirthMonth']"), monthOfBirth);
-        Assert.assertEquals(getSelectedItemInDropdown(driver, "//select[@name='DateOfBirthYear']"), yearOfBirth);
+        Assert.assertEquals(getSelectedOptionInDropdown(driver, "//select[@name='DateOfBirthDay']"), dayOfBirth);
+        Assert.assertEquals(getSelectedOptionInDropdown(driver, "//select[@name='DateOfBirthMonth']"), monthOfBirth);
+        Assert.assertEquals(getSelectedOptionInDropdown(driver, "//select[@name='DateOfBirthYear']"), yearOfBirth);
 
         Assert.assertEquals(getAttributeValue(driver, "//input[@id='Company']", "value"), companyName);
     }

@@ -98,22 +98,22 @@ public class Level_09_Switch_Site_Url extends BaseTest {
 
     @Test
     public void User_04_Switch_Site_Url() {
-        customerInfoPage.openPageUrl(driver, GlobalConstants.ADMIN_URL);
+        customerInfoPage.openUrl(driver, GlobalConstants.ADMIN_URL);
         loginAdminPage = PageGenerator.getLoginAdminPage(driver);
 
         dashboardAdminPage = loginAdminPage.loginToSystem(GlobalConstants.ADMIN_EMAIL, GlobalConstants.ADMIN_PASSWORD);
         Assert.assertTrue(dashboardAdminPage.isLogoutLinkDisplayed());
 
-        dashboardAdminPage.openPageUrl(driver, GlobalConstants.USER_URL);
+        dashboardAdminPage.openUrl(driver, GlobalConstants.USER_URL);
         homePage = PageGenerator.getHomePage(driver);
 
-        homePage.openPageUrl(driver, GlobalConstants.ADMIN_URL);
+        homePage.openUrl(driver, GlobalConstants.ADMIN_URL);
         dashboardAdminPage = PageGenerator.getDashboardAdminPage(driver);
         dashboardAdminPage.clickOnSalesLink();
         dashboardAdminPage.clickOnPromotionsLink();
         dashboardAdminPage.clickOnCustomersLink();
 
-        dashboardAdminPage.openPageUrl(driver, GlobalConstants.USER_URL);
+        dashboardAdminPage.openUrl(driver, GlobalConstants.USER_URL);
         homePage = PageGenerator.getHomePage(driver);
     }
 

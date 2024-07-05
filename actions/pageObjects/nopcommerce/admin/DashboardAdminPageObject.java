@@ -19,24 +19,24 @@ public class DashboardAdminPageObject extends BasePage {
     public void clickOnCustomersLink() {
         waitForElementClickable(driver, DashboardAdminPageUI.CUSTOMERS_LINK);
         clickOnElement(driver, DashboardAdminPageUI.CUSTOMERS_LINK);
-        sleepInSecond(1);
+        sleepInSeconds(1);
     }
 
     public void clickOnPromotionsLink() {
         waitForElementClickable(driver, DashboardAdminPageUI.PROMOTIONS_LINK);
         clickOnElement(driver, DashboardAdminPageUI.PROMOTIONS_LINK);
-        sleepInSecond(1);
+        sleepInSeconds(1);
     }
 
     public void clickOnSalesLink() {
         waitForElementClickable(driver, DashboardAdminPageUI.SALES_LINK);
         clickOnElement(driver, DashboardAdminPageUI.SALES_LINK);
-        sleepInSecond(1);
+        sleepInSeconds(1);
     }
 
     public void clickOnSidebarLink(String linkName) {
         waitForElementClickable(driver, DashboardAdminPageUI.SIDEBAR_DYNAMIC_LINK, linkName);
         clickOnElement(driver, DashboardAdminPageUI.SIDEBAR_DYNAMIC_LINK, linkName);
-        sleepInSecond(1);
+        sleepInSeconds(1);
     }
 }

@@ -29,17 +29,17 @@ public class CustomerInfoPageObject extends MyAccountPageObject {
 
     public String getValueInDayDropdown() {
         waitForElementClickable(driver, CustomerInfoPageUI.DAY_DROPDOWN);
-        return getSelectedItemInDropdown(driver, CustomerInfoPageUI.DAY_DROPDOWN);
+        return getSelectedOptionInDropdown(driver, CustomerInfoPageUI.DAY_DROPDOWN);
     }
 
     public String getValueInMonthDropdown() {
         waitForElementClickable(driver, CustomerInfoPageUI.MONTH_DROPDOWN);
-        return getSelectedItemInDropdown(driver, CustomerInfoPageUI.MONTH_DROPDOWN);
+        return getSelectedOptionInDropdown(driver, CustomerInfoPageUI.MONTH_DROPDOWN);
     }
 
     public String getValueInYearDropdown() {
         waitForElementClickable(driver, CustomerInfoPageUI.YEAR_DROPDOWN);
-        return getSelectedItemInDropdown(driver, CustomerInfoPageUI.YEAR_DROPDOWN);
+        return getSelectedOptionInDropdown(driver, CustomerInfoPageUI.YEAR_DROPDOWN);
     }
 
     public String getValueInCompanyTextbox() {

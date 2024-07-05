@@ -14,12 +14,12 @@ public class LoginPageObject extends BasePageObject {
 
     public void sendKeyToEmailTextbox(String emailAddress) {
         waitForElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
-        sendKeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
+        sendKeysToElement(driver, LoginPageUI.EMAIL_TEXTBOX, emailAddress);
     }
 
     public void sendKeyToPasswordTextbox(String password) {
         waitForElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
-        sendKeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
+        sendKeysToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, password);
     }
 
     public void clickOnLoginButton() {

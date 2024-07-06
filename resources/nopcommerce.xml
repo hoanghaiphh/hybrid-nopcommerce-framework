@@ -2,24 +2,28 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="NopCommerce Automation Testing">
 
+    <listeners>
+        <listener class-name="commons.MethodListener"/>
+    </listeners>
+
     <test name="Run on Firefox browser">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
+            <class name="com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert"/>
         </classes>
     </test>
 
     <test name="Run on Chrome browser">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
+            <class name="com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert"/>
         </classes>
     </test>
 
     <test name="Run on Edge browser">
         <parameter name="browser" value="Edge"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_10_Dynamic_Locator"/>
+            <class name="com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert"/>
         </classes>
     </test>
 

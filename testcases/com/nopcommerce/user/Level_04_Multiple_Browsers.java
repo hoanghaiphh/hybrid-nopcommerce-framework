@@ -43,7 +43,7 @@ public class Level_04_Multiple_Browsers extends BaseTest {
 
         registerPage = new RegisterPageObject(driver);
 
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

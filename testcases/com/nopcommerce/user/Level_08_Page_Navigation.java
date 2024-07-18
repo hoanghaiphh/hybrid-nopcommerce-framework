@@ -49,7 +49,7 @@ public class Level_08_Page_Navigation extends BaseTest {
     public void User_01_Register() {
         registerPage = homePage.clickOnRegisterLink();
 
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

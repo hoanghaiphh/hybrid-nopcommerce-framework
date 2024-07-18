@@ -9,21 +9,21 @@
     <test name="Run on Firefox browser">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert"/>
+            <class name="com.nopcommerce.user.Level_14_Log4J"/>
         </classes>
     </test>
 
     <test name="Run on Chrome browser">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert"/>
+            <class name="com.nopcommerce.user.Level_14_Log4J"/>
         </classes>
     </test>
 
     <test name="Run on Edge browser">
         <parameter name="browser" value="Edge"/>
         <classes>
-            <class name="com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert"/>
+            <class name="com.nopcommerce.user.Level_14_Log4J"/>
         </classes>
     </test>
 

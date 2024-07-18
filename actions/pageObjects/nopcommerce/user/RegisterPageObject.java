@@ -11,7 +11,7 @@ public class RegisterPageObject extends BasePageObject {
         this.driver = driver;
     }
 
-    public void clickOnGenderRadio() {
+    public void clickOnGenderMaleRadio() {
         waitForElementClickable(driver, RegisterPageUI.GENDER_MALE_RADIO);
         selectCheckboxOrRadio(driver, RegisterPageUI.GENDER_MALE_RADIO);
     }

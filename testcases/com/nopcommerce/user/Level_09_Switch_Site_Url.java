@@ -50,7 +50,7 @@ public class Level_09_Switch_Site_Url extends BaseTest {
         homePage = PageGenerator.getHomePage(driver);
 
         registerPage = homePage.clickOnRegisterLink();
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

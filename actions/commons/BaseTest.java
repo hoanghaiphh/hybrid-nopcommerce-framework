@@ -1,5 +1,7 @@
 package commons;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,6 +20,12 @@ public class BaseTest {
     private ChromeOptions chromeOptions = new ChromeOptions();
     private FirefoxOptions firefoxOptions = new FirefoxOptions();
     private EdgeOptions edgeOptions = new EdgeOptions();
+
+    protected final Logger log; // protected final Log log; --> log4j ver 1.x
+
+    protected BaseTest() {
+        log = LogManager.getLogger(getClass()); // log = LogFactory.getLog(getClass()); --> log4j ver 1.x
+    }
 
     protected WebDriver getBrowserDriver(String browserName) {
         BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
@@ -73,6 +81,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
+            log.info(e);
         }
         return status;
     }
@@ -85,6 +94,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
+            log.info(e);
         }
         return status;
     }
@@ -97,6 +107,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
+            log.info(e);
         }
         return status;
     }

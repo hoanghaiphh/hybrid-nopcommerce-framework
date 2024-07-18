@@ -47,7 +47,7 @@ public class Level_03_Page_Object_Pattern extends BaseTest {
 
         registerPage = new RegisterPageObject(driver);
 
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

@@ -50,7 +50,7 @@ public class Level_10_Dynamic_Locator extends BaseTest {
         homePage = PageGenerator.getHomePage(driver);
 
         registerPage = (RegisterPageObject) homePage.clickOnHeaderLink("Register");
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

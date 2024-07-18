@@ -43,7 +43,7 @@ public class Level_06_Page_Generator extends BaseTest {
     public void User_01_Register() {
         registerPage = homePage.clickOnRegisterLink();
 
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

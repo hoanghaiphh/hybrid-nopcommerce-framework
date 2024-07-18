@@ -40,7 +40,7 @@ public class Level_13_AssertVsVerify_02_Custom_Hard_Assert extends BaseTest {
         homePage = PageGenerator.getHomePage(driver);
 
         registerPage = (RegisterPageObject) homePage.clickOnHeaderLink("Register");
-        registerPage.clickOnGenderRadio();
+        registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
         registerPage.selectItemInDayDropdown(dayOfBirth);

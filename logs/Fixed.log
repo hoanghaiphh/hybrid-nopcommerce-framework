@@ -1,0 +1,364 @@
+[15-07-2024 10:30:36.984 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[15-07-2024 10:30:38.347 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[15-07-2024 10:30:38.735 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[15-07-2024 10:30:38.858 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[15-07-2024 10:30:38.932 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[15-07-2024 10:30:39.246 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[15-07-2024 10:30:39.573 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[15-07-2024 10:30:39.907 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting829938@gmail.com
+[15-07-2024 10:30:40.027 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[15-07-2024 10:30:40.112 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[15-07-2024 10:30:40.196 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[15-07-2024 10:30:40.251 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[15-07-2024 10:30:41.189 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[15-07-2024 10:30:41.327 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[15-07-2024 10:30:42.301 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:30:42.322 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[15-07-2024 10:30:43.019 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting829938@gmail.com and Password: Abcd@1234
+[15-07-2024 10:30:44.343 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[15-07-2024 10:30:44.487 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:30:44.498 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[15-07-2024 10:30:45.163 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[15-07-2024 10:30:45.282 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[15-07-2024 10:30:45.284 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[15-07-2024 10:30:45.326 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[15-07-2024 10:30:45.378 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[15-07-2024 10:30:45.378 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[15-07-2024 10:30:45.540 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[15-07-2024 10:30:45.661 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[15-07-2024 10:30:46.120 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[15-07-2024 10:30:46.155 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:30:52.097 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[15-07-2024 10:30:52.892 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[15-07-2024 10:30:53.078 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[15-07-2024 10:30:53.211 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[15-07-2024 10:30:53.348 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[15-07-2024 10:30:53.518 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[15-07-2024 10:30:53.673 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[15-07-2024 10:30:53.808 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting759194@gmail.com
+[15-07-2024 10:30:54.019 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[15-07-2024 10:30:54.168 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[15-07-2024 10:30:54.316 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[15-07-2024 10:30:54.441 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[15-07-2024 10:30:55.563 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[15-07-2024 10:30:55.630 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[15-07-2024 10:30:56.781 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:30:56.781 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[15-07-2024 10:30:57.430 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting759194@gmail.com and Password: Abcd@1234
+[15-07-2024 10:30:58.837 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[15-07-2024 10:30:58.941 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:30:58.948 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[15-07-2024 10:30:59.626 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[15-07-2024 10:30:59.718 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[15-07-2024 10:30:59.718 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[15-07-2024 10:30:59.788 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[15-07-2024 10:30:59.847 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[15-07-2024 10:30:59.848 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[15-07-2024 10:31:00.119 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[15-07-2024 10:31:00.319 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[15-07-2024 10:31:01.250 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[15-07-2024 10:31:01.298 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:31:06.578 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[15-07-2024 10:31:07.456 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[15-07-2024 10:31:07.642 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[15-07-2024 10:31:07.789 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[15-07-2024 10:31:07.927 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[15-07-2024 10:31:08.081 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[15-07-2024 10:31:08.235 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[15-07-2024 10:31:08.386 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting341431@gmail.com
+[15-07-2024 10:31:08.586 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[15-07-2024 10:31:08.767 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[15-07-2024 10:31:08.978 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[15-07-2024 10:31:09.093 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[15-07-2024 10:31:10.148 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[15-07-2024 10:31:10.585 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[15-07-2024 10:31:11.652 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:31:11.657 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[15-07-2024 10:31:12.218 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting341431@gmail.com and Password: Abcd@1234
+[15-07-2024 10:31:13.586 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[15-07-2024 10:31:13.731 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:31:13.731 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[15-07-2024 10:31:14.474 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[15-07-2024 10:31:14.559 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[15-07-2024 10:31:14.561 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[15-07-2024 10:31:14.616 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[15-07-2024 10:31:14.660 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[15-07-2024 10:31:14.661 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[15-07-2024 10:31:14.974 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[15-07-2024 10:31:15.166 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[15-07-2024 10:31:15.952 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[15-07-2024 10:31:15.991 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[15-07-2024 10:32:06.905 INFO com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert] - java.lang.AssertionError: expected [false] but found [true]
+[15-07-2024 10:32:06.970 INFO com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert] - java.lang.AssertionError: expected [firstName] but found [Automation]
+[15-07-2024 10:32:07.287 INFO com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert] - java.lang.AssertionError: expected [dayOfBirth] but found [15]
+[15-07-2024 10:32:07.860 INFO com.nopcommerce.user.Level_13_AssertVsVerify_02_Custom_Hard_Assert] - java.lang.AssertionError: expected [yearOfBirth] but found [1989]
+[17-07-2024 15:33:01.124 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[17-07-2024 15:33:02.168 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[17-07-2024 15:33:02.490 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[17-07-2024 15:33:02.634 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[17-07-2024 15:33:02.695 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[17-07-2024 15:33:03.007 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[17-07-2024 15:33:03.295 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[17-07-2024 15:33:03.577 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting102508@gmail.com
+[17-07-2024 15:33:03.636 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[17-07-2024 15:33:03.687 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[17-07-2024 15:33:03.732 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[17-07-2024 15:33:03.783 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[17-07-2024 15:33:05.212 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[17-07-2024 15:33:05.265 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[17-07-2024 15:33:14.377 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:33:14.404 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[17-07-2024 15:33:16.314 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting102508@gmail.com and Password: Abcd@1234
+[17-07-2024 15:33:17.309 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[17-07-2024 15:33:17.389 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:33:17.398 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[17-07-2024 15:33:18.297 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[17-07-2024 15:33:18.389 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[17-07-2024 15:33:18.389 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[17-07-2024 15:33:18.494 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[17-07-2024 15:33:18.660 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[17-07-2024 15:33:18.666 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[17-07-2024 15:33:19.002 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[17-07-2024 15:33:19.131 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[17-07-2024 15:33:19.614 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[17-07-2024 15:33:19.651 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:34:47.110 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[17-07-2024 15:34:57.279 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[17-07-2024 15:34:57.576 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[17-07-2024 15:34:57.748 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[17-07-2024 15:34:57.906 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[17-07-2024 15:34:58.116 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[17-07-2024 15:34:58.316 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[17-07-2024 15:34:58.518 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting623334@gmail.com
+[17-07-2024 15:34:58.713 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[17-07-2024 15:34:58.901 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[17-07-2024 15:34:59.092 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[17-07-2024 15:34:59.236 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[17-07-2024 15:35:00.406 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[17-07-2024 15:35:00.492 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[17-07-2024 15:35:02.016 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:35:02.016 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[17-07-2024 15:35:02.732 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting623334@gmail.com and Password: Abcd@1234
+[17-07-2024 15:35:06.031 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[17-07-2024 15:35:06.188 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:35:06.188 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[17-07-2024 15:35:06.998 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[17-07-2024 15:35:07.108 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[17-07-2024 15:35:07.108 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[17-07-2024 15:35:07.166 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[17-07-2024 15:35:07.239 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[17-07-2024 15:35:07.239 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[17-07-2024 15:35:07.556 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[17-07-2024 15:35:07.808 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[17-07-2024 15:35:09.011 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[17-07-2024 15:35:09.069 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:35:33.580 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[17-07-2024 15:35:46.532 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[17-07-2024 15:35:46.721 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[17-07-2024 15:35:46.868 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[17-07-2024 15:35:46.996 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[17-07-2024 15:35:47.286 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[17-07-2024 15:35:47.478 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[17-07-2024 15:35:47.652 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting720751@gmail.com
+[17-07-2024 15:35:47.917 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[17-07-2024 15:35:48.097 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[17-07-2024 15:35:48.358 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[17-07-2024 15:35:48.550 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[17-07-2024 15:35:50.928 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[17-07-2024 15:35:51.058 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[17-07-2024 15:35:52.896 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:35:52.896 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[17-07-2024 15:35:55.222 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting720751@gmail.com and Password: Abcd@1234
+[17-07-2024 15:35:56.751 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[17-07-2024 15:35:56.852 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:35:56.855 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[17-07-2024 15:36:32.037 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[17-07-2024 15:36:32.144 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[17-07-2024 15:36:32.144 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[17-07-2024 15:36:32.211 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[17-07-2024 15:36:32.279 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[17-07-2024 15:36:32.279 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[17-07-2024 15:36:32.622 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[17-07-2024 15:36:32.909 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[17-07-2024 15:36:34.349 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[17-07-2024 15:36:34.399 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:37:31.389 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[17-07-2024 15:37:32.789 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[17-07-2024 15:37:33.153 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[17-07-2024 15:37:33.406 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[17-07-2024 15:37:33.488 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[17-07-2024 15:37:33.809 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[17-07-2024 15:37:34.117 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[17-07-2024 15:37:34.437 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting317518@gmail.com
+[17-07-2024 15:37:34.533 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[17-07-2024 15:37:34.585 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[17-07-2024 15:37:34.700 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[17-07-2024 15:37:34.756 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[17-07-2024 15:37:37.637 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[17-07-2024 15:37:37.776 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[17-07-2024 15:37:38.833 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:37:38.858 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[17-07-2024 15:37:39.573 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting317518@gmail.com and Password: Abcd@1234
+[17-07-2024 15:37:45.130 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[17-07-2024 15:37:47.495 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:37:47.503 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[17-07-2024 15:37:48.057 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[17-07-2024 15:37:48.169 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[17-07-2024 15:37:48.169 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[17-07-2024 15:37:48.261 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[17-07-2024 15:37:48.314 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[17-07-2024 15:37:48.315 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[17-07-2024 15:37:48.486 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[17-07-2024 15:37:48.594 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[17-07-2024 15:37:49.052 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[17-07-2024 15:37:49.082 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:37:57.068 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[17-07-2024 15:38:09.530 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[17-07-2024 15:38:09.728 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[17-07-2024 15:38:09.891 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[17-07-2024 15:38:10.046 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[17-07-2024 15:38:10.241 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[17-07-2024 15:38:10.416 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[17-07-2024 15:38:10.588 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting232395@gmail.com
+[17-07-2024 15:38:10.785 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[17-07-2024 15:38:10.932 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[17-07-2024 15:38:11.082 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[17-07-2024 15:38:11.245 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[17-07-2024 15:38:12.200 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[17-07-2024 15:38:12.284 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[17-07-2024 15:38:13.275 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:38:13.279 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[17-07-2024 15:38:13.977 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting232395@gmail.com and Password: Abcd@1234
+[17-07-2024 15:38:20.559 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[17-07-2024 15:38:20.650 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:38:20.650 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[17-07-2024 15:38:21.345 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[17-07-2024 15:38:21.422 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[17-07-2024 15:38:21.422 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[17-07-2024 15:38:21.472 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[17-07-2024 15:38:21.525 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[17-07-2024 15:38:21.525 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[17-07-2024 15:38:21.804 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[17-07-2024 15:38:22.011 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[17-07-2024 15:38:23.003 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[17-07-2024 15:38:23.049 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:38:33.363 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[17-07-2024 15:38:42.631 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[17-07-2024 15:38:42.811 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[17-07-2024 15:38:42.975 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[17-07-2024 15:38:43.148 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[17-07-2024 15:38:43.288 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[17-07-2024 15:38:43.420 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[17-07-2024 15:38:43.552 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting871771@gmail.com
+[17-07-2024 15:38:43.791 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[17-07-2024 15:38:43.944 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[17-07-2024 15:38:44.069 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[17-07-2024 15:38:44.215 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[17-07-2024 15:38:45.063 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[17-07-2024 15:38:45.114 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[17-07-2024 15:38:45.987 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:38:45.993 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[17-07-2024 15:38:48.284 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting871771@gmail.com and Password: Abcd@1234
+[17-07-2024 15:38:49.704 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[17-07-2024 15:38:49.819 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[17-07-2024 15:38:49.819 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[17-07-2024 15:38:50.445 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[17-07-2024 15:38:50.492 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[17-07-2024 15:38:50.492 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[17-07-2024 15:38:50.532 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[17-07-2024 15:38:50.575 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[17-07-2024 15:38:50.575 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[17-07-2024 15:38:50.804 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[17-07-2024 15:38:50.984 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[17-07-2024 15:38:51.792 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[17-07-2024 15:38:51.830 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:27.613 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[18-07-2024 18:10:28.425 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[18-07-2024 18:10:28.990 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[18-07-2024 18:10:29.130 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[18-07-2024 18:10:29.230 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[18-07-2024 18:10:29.557 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[18-07-2024 18:10:29.845 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[18-07-2024 18:10:30.124 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting214368@gmail.com
+[18-07-2024 18:10:30.195 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[18-07-2024 18:10:30.245 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[18-07-2024 18:10:30.293 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[18-07-2024 18:10:30.351 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[18-07-2024 18:10:31.694 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[18-07-2024 18:10:31.807 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[18-07-2024 18:10:32.713 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:32.731 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[18-07-2024 18:10:33.366 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting214368@gmail.com and Password: Abcd@1234
+[18-07-2024 18:10:34.463 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[18-07-2024 18:10:34.639 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:34.648 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[18-07-2024 18:10:35.129 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[18-07-2024 18:10:35.215 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[18-07-2024 18:10:35.215 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[18-07-2024 18:10:35.255 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[18-07-2024 18:10:35.306 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[18-07-2024 18:10:35.306 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[18-07-2024 18:10:35.471 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[18-07-2024 18:10:35.562 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[18-07-2024 18:10:35.897 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[18-07-2024 18:10:35.927 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:43.293 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[18-07-2024 18:10:44.897 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[18-07-2024 18:10:45.059 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[18-07-2024 18:10:45.194 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[18-07-2024 18:10:45.300 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[18-07-2024 18:10:45.430 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[18-07-2024 18:10:45.544 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[18-07-2024 18:10:45.656 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting515035@gmail.com
+[18-07-2024 18:10:45.846 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[18-07-2024 18:10:45.968 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[18-07-2024 18:10:46.081 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[18-07-2024 18:10:46.194 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[18-07-2024 18:10:47.027 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[18-07-2024 18:10:47.096 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[18-07-2024 18:10:47.834 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:47.837 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[18-07-2024 18:10:48.366 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting515035@gmail.com and Password: Abcd@1234
+[18-07-2024 18:10:49.665 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[18-07-2024 18:10:50.012 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:50.016 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[18-07-2024 18:10:50.544 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[18-07-2024 18:10:50.620 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[18-07-2024 18:10:50.621 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[18-07-2024 18:10:50.668 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[18-07-2024 18:10:50.702 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[18-07-2024 18:10:50.703 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[18-07-2024 18:10:50.923 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[18-07-2024 18:10:51.073 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[18-07-2024 18:10:51.912 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[18-07-2024 18:10:51.944 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:10:57.076 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 01: Click on Register link in header
+[18-07-2024 18:10:57.676 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 02: Select Gender Male radio button
+[18-07-2024 18:10:57.812 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 03: Input value into Firstname textbox: Automation
+[18-07-2024 18:10:57.972 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 04: Input value into Lastname textbox: Testing
+[18-07-2024 18:10:58.164 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 05: Select value for Day dropdown: 15
+[18-07-2024 18:10:58.348 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 06: Select value for Month dropdown: October
+[18-07-2024 18:10:58.470 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 07: Select value for Year dropdown: 1989
+[18-07-2024 18:10:58.605 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 08: Input value into Email textbox: AutomationTesting341316@gmail.com
+[18-07-2024 18:10:58.908 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 09: Input value into Company textbox: Online 29
+[18-07-2024 18:10:59.056 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 10: Input value into Password textbox: Abcd@1234
+[18-07-2024 18:10:59.189 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 11: Input value into Confirm Password textbox: Abcd@1234
+[18-07-2024 18:10:59.331 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 12: Click on Register button
+[18-07-2024 18:11:00.277 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 13: Verify Success Message displayed
+[18-07-2024 18:11:00.355 INFO com.nopcommerce.user.Level_14_Log4J] - Pre-condition: Register - Step 14: Click on Log Out link
+[18-07-2024 18:11:02.551 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:11:02.561 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 01: Click on Log In link
+[18-07-2024 18:11:03.181 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 02: Login to system with Email: AutomationTesting341316@gmail.com and Password: Abcd@1234
+[18-07-2024 18:11:04.482 INFO com.nopcommerce.user.Level_14_Log4J] - User_01_Login - Step 03: Verify My Account link displayed in header
+[18-07-2024 18:11:04.687 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------
+[18-07-2024 18:11:04.689 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 01: Click on My Account link in header
+[18-07-2024 18:11:05.470 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 02: Verify Gender Male radio button selected
+[18-07-2024 18:11:05.538 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [false] but found [true]
+[18-07-2024 18:11:05.539 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 03: Verify value in Firstname textbox: Automation
+[18-07-2024 18:11:05.582 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 04: Verify value in Lastname textbox: Testing
+[18-07-2024 18:11:05.636 INFO com.nopcommerce.user.Level_14_Log4J] - java.lang.AssertionError: expected [lastName] but found [Testing]
+[18-07-2024 18:11:05.636 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 05: Verify value in Day dropdown: 15
+[18-07-2024 18:11:05.881 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 06: Verify value in Month dropdown: October
+[18-07-2024 18:11:06.066 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 07: Verify value in Year dropdown: 1989
+[18-07-2024 18:11:06.755 INFO com.nopcommerce.user.Level_14_Log4J] - User_02_MyAccount - Step 08: Verify value in Company textbox: Online 29
+[18-07-2024 18:11:06.787 INFO com.nopcommerce.user.Level_14_Log4J] - -------------------------------------------------------------------

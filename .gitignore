@@ -5,6 +5,8 @@ out/
 .idea/
 libSources/
 logs/
+test-output/
+screenshots/
 
 ### Eclipse ###
 .apt_generated

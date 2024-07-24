@@ -20,5 +20,6 @@ public class GlobalConstants {
 
     // Directory
     public static final String UPLOAD_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "uploadFiles" + SEPARATOR;
+    public static final String SCREENSHOTS_FOLDER_PATH = PROJECT_PATH +SEPARATOR + "screenshots" + SEPARATOR;
 
 }

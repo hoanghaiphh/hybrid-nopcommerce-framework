@@ -14,7 +14,7 @@
             <PatternLayout pattern="${pattern}" />
         </File>
 
-        <File name="RandomFile" fileName="logs/Random.${random}.log" immediateFlush="false" append="true">
+        <File name="RandomFile" fileName="logs/Random_${random}.log" immediateFlush="false" append="true">
             <PatternLayout pattern="${pattern}" />
         </File>
 

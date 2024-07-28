@@ -1,5 +1,6 @@
 package commons;
 
+import com.aventstack.extentreports.Status;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -11,9 +12,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import reportConfig.ExtentManager;
 
 import java.io.File;
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.Random;
 
@@ -81,7 +85,6 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
-            log.info(e);
         }
         return status;
     }
@@ -94,7 +97,6 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
-            log.info(e);
         }
         return status;
     }
@@ -107,7 +109,6 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
-            log.info(e);
         }
         return status;
     }
@@ -128,6 +129,15 @@ public class BaseTest {
     @BeforeSuite
     protected void clearReport() {
         deleteAllFilesInFolder(GlobalConstants.SCREENSHOTS_FOLDER_PATH);
+    }
+
+    @BeforeMethod
+    protected void extentStartTest(Method method) {
+        ExtentManager.startTest(method.getName() + " - Run on " + BasePage.getCurrentBrowserName(driver), method.getName());
+    }
+
+    protected void extentLog(String msg) {
+        ExtentManager.getTest().log(Status.INFO, msg);
     }
 
 }

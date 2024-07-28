@@ -5,6 +5,7 @@ public class GlobalConstants {
     public static final String PROJECT_PATH = System.getProperty("user.dir");
     public static final String OS_NAME = System.getProperty("os.name");
     public static final String SEPARATOR = System.getProperty("file.separator");
+    public static final String JAVA_VERSION = System.getProperty("java.version");
 
     // App Information User
     public static final String USER_URL = "https://demo.nopcommerce.com";
@@ -20,6 +21,7 @@ public class GlobalConstants {
 
     // Directory
     public static final String UPLOAD_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "uploadFiles" + SEPARATOR;
-    public static final String SCREENSHOTS_FOLDER_PATH = PROJECT_PATH +SEPARATOR + "screenshots" + SEPARATOR;
+    public static final String SCREENSHOTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "screenshots" + SEPARATOR;
+    public static final String EXTENT_REPORTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "extentReports" + SEPARATOR;
 
 }

@@ -3,21 +3,20 @@ package com.nopcommerce.user;
 import commons.BaseTest;
 import commons.GlobalConstants;
 import org.openqa.selenium.WebDriver;
-import static org.testng.Assert.assertEquals;
-import static org.testng.Assert.assertTrue;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
 import pageObjects.nopcommerce.PageGenerator;
 import pageObjects.nopcommerce.user.HomePageObject;
 import pageObjects.nopcommerce.user.LoginPageObject;
 import pageObjects.nopcommerce.user.RegisterPageObject;
 import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
 
-public class Level_13_AssertVsVerify_01_Soft_Assert extends BaseTest {
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
+public class Level_13_Assert_Verify_02_Custom_Hard_Assert extends BaseTest {
     private WebDriver driver;
-    private SoftAssert soft;
 
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
@@ -36,7 +35,6 @@ public class Level_13_AssertVsVerify_01_Soft_Assert extends BaseTest {
     @BeforeClass
     public void beforeClass() {
         driver = openBrowserWithUrl("firefox", GlobalConstants.USER_URL);
-        soft = new SoftAssert();
 
         // Register (Pre-conditions)
         homePage = PageGenerator.getHomePage(driver);
@@ -70,15 +68,13 @@ public class Level_13_AssertVsVerify_01_Soft_Assert extends BaseTest {
     public void User_02_MyAccount() {
         customerInfoPage = (CustomerInfoPageObject) homePage.clickOnHeaderLink("My account");
 
-        soft.assertFalse(customerInfoPage.isGenderMaleSelected(), "Gender Male is selected\t\t");
-        soft.assertEquals(customerInfoPage.getValueInFirstnameTextbox(), "firstName", "Firstname is not matched\t");
-        soft.assertEquals(customerInfoPage.getValueInLastnameTextbox(), lastName);
-        soft.assertEquals(customerInfoPage.getValueInDayDropdown(), "dayOfBirth", "DayOfBirth is not matched\t");
-        soft.assertEquals(customerInfoPage.getValueInMonthDropdown(), monthOfBirth);
-        soft.assertEquals(customerInfoPage.getValueInYearDropdown(), "yearOfBirth", "YearOfBirth is not matched\t");
-        soft.assertEquals(customerInfoPage.getValueInCompanyTextbox(), companyName);
-
-        soft.assertAll();
+        verifyFalse(customerInfoPage.isGenderMaleSelected());
+        verifyEquals(customerInfoPage.getValueInFirstnameTextbox(), "firstName");
+        verifyEquals(customerInfoPage.getValueInLastnameTextbox(), lastName);
+        verifyEquals(customerInfoPage.getValueInDayDropdown(), "dayOfBirth");
+        verifyEquals(customerInfoPage.getValueInMonthDropdown(), monthOfBirth);
+        verifyEquals(customerInfoPage.getValueInYearDropdown(), "yearOfBirth");
+        verifyEquals(customerInfoPage.getValueInCompanyTextbox(), companyName);
     }
 
     @AfterClass

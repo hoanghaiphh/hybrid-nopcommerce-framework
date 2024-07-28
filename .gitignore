@@ -7,6 +7,7 @@ libSources/
 logs/
 test-output/
 screenshots/
+extentReports/
 
 ### Eclipse ###
 .apt_generated

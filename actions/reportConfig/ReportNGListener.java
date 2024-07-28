@@ -1,4 +1,4 @@
-package reportConfigs;
+package reportConfig;
 
 import commons.BaseTest;
 import commons.GlobalConstants;

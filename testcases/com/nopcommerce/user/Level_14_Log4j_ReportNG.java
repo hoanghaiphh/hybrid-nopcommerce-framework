@@ -2,7 +2,6 @@ package com.nopcommerce.user;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -16,7 +15,7 @@ import pageObjects.nopcommerce.user.LoginPageObject;
 import pageObjects.nopcommerce.user.RegisterPageObject;
 import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
 
-public class Level_14_Log4J_ReportNG extends BaseTest {
+public class Level_14_Log4j_ReportNG extends BaseTest {
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;

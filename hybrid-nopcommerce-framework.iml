@@ -10,6 +10,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="libraries" level="project" />
+    <orderEntry type="library" name="selenium-testng" level="project" />
+    <orderEntry type="library" name="log4j-reportng" level="project" />
+    <orderEntry type="library" name="extentReports" level="project" />
   </component>
 </module>

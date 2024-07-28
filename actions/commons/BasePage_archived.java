@@ -12,10 +12,10 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
-public class BasePageX {
+public class BasePage_archived {
 
-    public static BasePageX getBasePage() {
-        return new BasePageX();
+    public static BasePage_archived getBasePage() {
+        return new BasePage_archived();
     }
 
     public void sleepInSeconds(long timeInSecond) {

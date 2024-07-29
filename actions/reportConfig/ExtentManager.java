@@ -32,10 +32,12 @@ public class ExtentManager {
         return extentReports;
     }
 
+    static ExtentReports extent = createExtentReports();
+
     static Map<Integer, ExtentTest> extentTestMap = new HashMap<Integer, ExtentTest>();
 
     public static synchronized ExtentTest startTest(String testName, String desc) {
-        ExtentTest test = createExtentReports().createTest(testName, desc);
+        ExtentTest test = extent.createTest(testName, desc);
         extentTestMap.put((int) Thread.currentThread().getId(), test);
         return test;
     }

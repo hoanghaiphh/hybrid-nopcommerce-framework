@@ -82,7 +82,7 @@ public class Level_15_Extent_Reports extends BaseTest {
         registerPage.clickOnRegisterButton();
 
         extentLog("User_01_Register - Step 13: Verify Success Message displayed");
-        verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed");
+        verifyEquals(registerPage.getRegisterSuccessMessage(), "Your registration completed..."); // failed
 
         extentLog("User_01_Register - Step 14: Click on Log Out link");
         homePage = (HomePageObject) registerPage.clickOnHeaderLink("Log out");
@@ -99,7 +99,7 @@ public class Level_15_Extent_Reports extends BaseTest {
         homePage = loginPage.loginToSystem(emailAddress, password);
 
         extentLog("User_02_Login - Step 03: Verify My Account link displayed in header");
-        verifyFalse(homePage.isMyAccountLinkDisplayed()); // failed
+        verifyTrue(homePage.isMyAccountLinkDisplayed());
     }
 
     @Test
@@ -116,7 +116,7 @@ public class Level_15_Extent_Reports extends BaseTest {
         verifyEquals(customerInfoPage.getValueInFirstnameTextbox(), firstName);
 
         extentLog("User_03_MyAccount - Step 04: Verify value in Lastname textbox: " + lastName);
-        verifyEquals(customerInfoPage.getValueInLastnameTextbox(), "lastName"); // failed
+        verifyEquals(customerInfoPage.getValueInLastnameTextbox(), "Testing..."); // failed
 
         extentLog("User_03_MyAccount - Step 05: Verify value in Day dropdown: " + dayOfBirth);
         verifyEquals(customerInfoPage.getValueInDayDropdown(), dayOfBirth);
@@ -125,7 +125,7 @@ public class Level_15_Extent_Reports extends BaseTest {
         verifyEquals(customerInfoPage.getValueInMonthDropdown(), monthOfBirth);
 
         extentLog("User_03_MyAccount - Step 07: Verify value in Year dropdown: " + yearOfBirth);
-        verifyEquals(customerInfoPage.getValueInYearDropdown(), "yearOfBirth"); // failed
+        verifyEquals(customerInfoPage.getValueInYearDropdown(), "1890"); // failed
 
         extentLog("User_03_MyAccount - Step 08: Verify value in Company textbox: " + companyName);
         verifyEquals(customerInfoPage.getValueInCompanyTextbox(), companyName);

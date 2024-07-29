@@ -39,13 +39,12 @@ public class ExtentListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
+        getTest().log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getName() + " - Failed", ExtentColor.RED));
+
         WebDriver driver = ((BaseTest) iTestResult.getInstance()).getDriver();
         String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-
         getTest().log(Status.FAIL, "Screenshot and Exception", iTestResult.getThrowable(),
                 getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
-
-        getTest().log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getName() + " - Failed", ExtentColor.RED));
     }
 
     @Override

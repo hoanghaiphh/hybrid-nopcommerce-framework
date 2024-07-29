@@ -85,6 +85,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
+            addScreenshotAndException(e);
         }
         return status;
     }
@@ -97,6 +98,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
+            addScreenshotAndException(e);
         }
         return status;
     }
@@ -109,8 +111,15 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
+            addScreenshotAndException(e);
         }
         return status;
+    }
+
+    protected void addScreenshotAndException(Throwable e) {
+        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+        ExtentManager.getTest().log(Status.FAIL, "java.lang.AssertionError: " + e.getMessage(),
+                ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
     }
 
     protected void deleteAllFilesInFolder(String folder) {

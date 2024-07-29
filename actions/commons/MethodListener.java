@@ -26,20 +26,32 @@ public class MethodListener implements IInvokedMethodListener {
             }
 
             List<Throwable> failures = allFailures.getFailuresForTest(result);
-            int size = failures.size() - 1;
 
-            if (size > 0) {
+            if (failures.size() > 0) {
                 result.setStatus(ITestResult.FAILURE);
-                if (size == 1) {
+                String lastFailure = failures.get(failures.size() - 1).toString();
+
+                if (failures.size() == 1) {
                     result.setThrowable(failures.get(0));
+
+                } else if (failures.size() == 2 && lastFailure.contains("java.lang.AssertionError")) {
+                    result.setThrowable(failures.get(0));
+
                 } else {
-                    StringBuffer message = new StringBuffer("Multiple failures (").append(size).append("):\n");
-                    for (int failure = 0; failure < size - 1; failure++) {
-                        message.append("Failure ").append(failure + 1).append(" of ").append(size).append("\n");
-                        message.append(Utils.longStackTrace(failures.get(failure), false)).append("\n");
+                    int adjustSize = 0;
+                    if (lastFailure.contains("java.lang.AssertionError")) {
+                        adjustSize = failures.size() - 1;
+                    } else {
+                        adjustSize = failures.size();
                     }
-                    Throwable last = failures.get(size - 1);
-                    message.append("Failure ").append(size).append(" of ").append(size).append("\n");
+
+                    StringBuffer message = new StringBuffer(adjustSize + " Failures\n");
+                    for (int i = 0; i < adjustSize - 1; i++) {
+                        message.append("Failure " + (i + 1) + " of " + adjustSize + "\n");
+                        message.append(Utils.longStackTrace(failures.get(i), false)).append("\n");
+                    }
+                    Throwable last = failures.get(adjustSize - 1);
+                    message.append("Failure " + adjustSize + " of " + adjustSize + "\n");
                     message.append(last.toString());
                     Throwable merged = new Throwable(message.toString());
                     merged.setStackTrace(last.getStackTrace());

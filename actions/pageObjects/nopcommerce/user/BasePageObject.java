@@ -1,6 +1,7 @@
 package pageObjects.nopcommerce.user;
 
 import commons.BasePage;
+import io.qameta.allure.Step;
 import pageObjects.nopcommerce.PageGenerator;
 import org.openqa.selenium.WebDriver;
 import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
@@ -19,6 +20,7 @@ public class BasePageObject extends BasePage {
         return PageGenerator.getRegisterPage(driver);
     }
 
+    @Step("My Account link displayed in header...")
     public boolean isMyAccountLinkDisplayed() {
         waitForElementVisible(driver, BasePageUI.MY_ACCOUNT_LINK);
         return isElementDisplayed(driver, BasePageUI.MY_ACCOUNT_LINK);
@@ -44,6 +46,7 @@ public class BasePageObject extends BasePage {
         return PageGenerator.getHomePage(driver);
     }
 
+    @Step("Click on {0} link in header")
     public BasePageObject clickOnHeaderLink(String pageName) {
         waitForElementClickable(driver, BasePageUI.HEADER_DYNAMIC_LINK, pageName);
         clickOnElement(driver, BasePageUI.HEADER_DYNAMIC_LINK, pageName);

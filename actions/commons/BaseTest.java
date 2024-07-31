@@ -1,6 +1,8 @@
 package commons;
 
 import com.aventstack.extentreports.Status;
+import io.qameta.allure.Attachment;
+import io.qameta.allure.Step;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -12,7 +14,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import reportConfig.ExtentManager;
 
@@ -77,51 +78,6 @@ public class BaseTest {
         return new Random().nextInt(999999);
     }
 
-    protected boolean verifyTrue(boolean condition) {
-        boolean status = true;
-        try {
-            Assert.assertTrue(condition);
-        } catch (Throwable e) {
-            status = false;
-            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
-            Reporter.getCurrentTestResult().setThrowable(e);
-            addScreenshotAndException(e);
-        }
-        return status;
-    }
-
-    protected boolean verifyFalse(boolean condition) {
-        boolean status = true;
-        try {
-            Assert.assertFalse(condition);
-        } catch (Throwable e) {
-            status = false;
-            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
-            Reporter.getCurrentTestResult().setThrowable(e);
-            addScreenshotAndException(e);
-        }
-        return status;
-    }
-
-    protected boolean verifyEquals(Object actual, Object expected) {
-        boolean status = true;
-        try {
-            Assert.assertEquals(actual, expected);
-        } catch (Throwable e) {
-            status = false;
-            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
-            Reporter.getCurrentTestResult().setThrowable(e);
-            addScreenshotAndException(e);
-        }
-        return status;
-    }
-
-    protected void addScreenshotAndException(Throwable e) {
-        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-        ExtentManager.getTest().log(Status.FAIL, "java.lang.AssertionError: " + e.getMessage(),
-                ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
-    }
-
     protected void deleteAllFilesInFolder(String folder) {
         try {
             File[] listOfFiles = new File(folder).listFiles();
@@ -138,9 +94,66 @@ public class BaseTest {
     @BeforeSuite
     protected void clearReport() {
         deleteAllFilesInFolder(GlobalConstants.SCREENSHOTS_FOLDER_PATH);
+        deleteAllFilesInFolder(GlobalConstants.ALLURE_RESULTS_FOLDER_PATH);
     }
 
-    @BeforeMethod
+    @Step("Verify True")
+    protected boolean verifyTrue(boolean condition) {
+        boolean status = true;
+        try {
+            Assert.assertTrue(condition);
+        } catch (Throwable e) {
+            status = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+//            extentAttachScreenshot(e);
+            allureAttachScreenshot();
+        }
+        return status;
+    }
+
+    @Step("Verify False")
+    protected boolean verifyFalse(boolean condition) {
+        boolean status = true;
+        try {
+            Assert.assertFalse(condition);
+        } catch (Throwable e) {
+            status = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+//            extentAttachScreenshot(e);
+            allureAttachScreenshot();
+        }
+        return status;
+    }
+
+    @Step("Verify Equals")
+    protected boolean verifyEquals(Object actual, Object expected) {
+        boolean status = true;
+        try {
+            Assert.assertEquals(actual, expected);
+        } catch (Throwable e) {
+            status = false;
+            VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
+            Reporter.getCurrentTestResult().setThrowable(e);
+//            extentAttachScreenshot(e);
+            allureAttachScreenshot();
+        }
+        return status;
+    }
+
+    @Attachment(value = "Verification Failure - Screenshot", type = "image/png")
+    protected byte[] allureAttachScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    }
+
+    protected void extentAttachScreenshot(Throwable e) {
+        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+        ExtentManager.getTest().log(Status.FAIL, "java.lang.AssertionError: " + e.getMessage(),
+                ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
+    }
+
+//    @BeforeMethod
     protected void extentStartTest(Method method) {
         ExtentManager.startTest(method.getName() + " - Run on " + BasePage.getCurrentBrowserName(driver), method.getName());
     }

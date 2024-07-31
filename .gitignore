@@ -8,6 +8,8 @@ logs/
 test-output/
 screenshots/
 extentReports/
+allure-results/*.json
+allure-results/*-attachment
 
 ### Eclipse ###
 .apt_generated

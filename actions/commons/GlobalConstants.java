@@ -23,5 +23,6 @@ public class GlobalConstants {
     public static final String UPLOAD_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "uploadFiles" + SEPARATOR;
     public static final String SCREENSHOTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "screenshots" + SEPARATOR;
     public static final String EXTENT_REPORTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "extentReports" + SEPARATOR;
+    public static final String ALLURE_RESULTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "allure-results" + SEPARATOR;
 
 }

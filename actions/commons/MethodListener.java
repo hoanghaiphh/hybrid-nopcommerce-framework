@@ -34,8 +34,8 @@ public class MethodListener implements IInvokedMethodListener {
                 if (failures.size() == 1) {
                     result.setThrowable(failures.get(0));
 
-                } else if (failures.size() == 2 && lastFailure.contains("java.lang.AssertionError")) {
-                    result.setThrowable(failures.get(0));
+                /*} else if (failures.size() == 2 && lastFailure.contains("java.lang.AssertionError")) {
+                    result.setThrowable(failures.get(0));*/
 
                 } else {
                     int adjustSize = 0;
@@ -45,7 +45,7 @@ public class MethodListener implements IInvokedMethodListener {
                         adjustSize = failures.size();
                     }
 
-                    StringBuffer message = new StringBuffer(adjustSize + " Failures\n");
+                    StringBuffer message = new StringBuffer(adjustSize + " Failure(s)\n");
                     for (int i = 0; i < adjustSize - 1; i++) {
                         message.append("Failure " + (i + 1) + " of " + adjustSize + "\n");
                         message.append(Utils.longStackTrace(failures.get(i), false)).append("\n");

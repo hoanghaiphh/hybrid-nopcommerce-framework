@@ -77,7 +77,7 @@ public class Level_16_Allure extends BaseTest {
     public void User_03_MyAccount() {
         customerInfoPage = (CustomerInfoPageObject) homePage.clickOnHeaderLink("My account");
 
-        verifyTrue(customerInfoPage.isGenderMaleSelected());
+        verifyFalse(customerInfoPage.isGenderMaleSelected()); // failed
         verifyEquals(customerInfoPage.getValueInFirstnameTextbox(), firstName);
         verifyEquals(customerInfoPage.getValueInLastnameTextbox(), "Testing..."); // failed
         verifyEquals(customerInfoPage.getValueInDayDropdown(), dayOfBirth);

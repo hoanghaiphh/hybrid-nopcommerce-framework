@@ -97,7 +97,6 @@ public class BaseTest {
         deleteAllFilesInFolder(GlobalConstants.ALLURE_RESULTS_FOLDER_PATH);
     }
 
-    @Step("Verify True")
     protected boolean verifyTrue(boolean condition) {
         boolean status = true;
         try {
@@ -107,12 +106,11 @@ public class BaseTest {
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
 //            extentAttachScreenshot(e);
-            allureAttachScreenshot();
+            verificationFailed(e.getMessage());
         }
         return status;
     }
 
-    @Step("Verify False")
     protected boolean verifyFalse(boolean condition) {
         boolean status = true;
         try {
@@ -122,35 +120,38 @@ public class BaseTest {
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
 //            extentAttachScreenshot(e);
-            allureAttachScreenshot();
+            verificationFailed(e.getMessage());
         }
         return status;
     }
 
-    @Step("Verify Equals")
     protected boolean verifyEquals(Object actual, Object expected) {
         boolean status = true;
         try {
             Assert.assertEquals(actual, expected);
+            verificationPassed(expected);
         } catch (Throwable e) {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
 //            extentAttachScreenshot(e);
-            allureAttachScreenshot();
+            verificationFailed(e.getMessage());
         }
         return status;
     }
 
-    @Attachment(value = "Verification Failure - Screenshot", type = "image/png")
-    protected byte[] allureAttachScreenshot() {
-        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+    @Step(">> verify passed: value = {0}")
+    private void verificationPassed(Object expected) {
     }
 
-    protected void extentAttachScreenshot(Throwable e) {
-        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-        ExtentManager.getTest().log(Status.FAIL, "java.lang.AssertionError: " + e.getMessage(),
-                ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
+    @Step(">> verify FAILED: {0}")
+    private void verificationFailed(String msg) {
+        allureAttachScreenshot();
+    }
+
+    @Attachment(value = "Verification failure Screenshot", type = "image/png")
+    private byte[] allureAttachScreenshot() {
+        return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
 //    @BeforeMethod
@@ -160,6 +161,12 @@ public class BaseTest {
 
     protected void extentLog(String msg) {
         ExtentManager.getTest().log(Status.INFO, msg);
+    }
+
+    protected void extentAttachScreenshot(Throwable e) {
+        String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+        ExtentManager.getTest().log(Status.FAIL, "java.lang.AssertionError: " + e.getMessage(),
+                ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
     }
 
 }

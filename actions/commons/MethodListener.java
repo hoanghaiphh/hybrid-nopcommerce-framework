@@ -46,16 +46,11 @@ public class MethodListener implements IInvokedMethodListener {
                     }
 
                     StringBuffer message = new StringBuffer(adjustSize + " Failure(s)\n");
-                    for (int i = 0; i < adjustSize - 1; i++) {
+                    for (int i = 0; i < adjustSize; i++) {
                         message.append("Failure " + (i + 1) + " of " + adjustSize + "\n");
-                        message.append(Utils.longStackTrace(failures.get(i), false)).append("\n");
+                        message.append(Utils.shortStackTrace(failures.get(i), false)).append("\n");
                     }
-                    Throwable last = failures.get(adjustSize - 1);
-                    message.append("Failure " + adjustSize + " of " + adjustSize + "\n");
-                    message.append(last.toString());
-                    Throwable merged = new Throwable(message.toString());
-                    merged.setStackTrace(last.getStackTrace());
-                    result.setThrowable(merged);
+                    result.setThrowable(new Throwable(message.toString()));
                 }
             }
         }

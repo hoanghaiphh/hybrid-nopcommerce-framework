@@ -78,7 +78,7 @@ public class RegisterPageObject extends BasePageObject {
         clickOnElement(driver, RegisterPageUI.REGISTER_BUTTON);
     }
 
-    @Step("Get Register success message...")
+    @Step("Get Register success message")
     public String getRegisterSuccessMessage() {
         waitForElementVisible(driver, RegisterPageUI.REGISTER_SUCCESS_MESSAGE);
         return getElementText(driver, RegisterPageUI.REGISTER_SUCCESS_MESSAGE);

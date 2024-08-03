@@ -12,15 +12,15 @@ import org.testng.ITestResult;
 public class AllureListener extends BaseTest implements ITestListener {
 
     // Screenshot attachments for Allure
-    @Attachment(value = "[ {0}  FAILED ] - SCREENSHOT", type = "image/png")
-    private byte[] attachScreenshot(String testName, WebDriver driver) {
+    @Attachment(value = "{0} FAILURE SCREENSHOT", type = "image/png")
+    private byte[] attachScreenshot(String title, WebDriver driver) {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
     // Text attachments for Allure
-    @Attachment(value = "Text attachment of {0}", type = "text/plain")
-    private String attachTextLog(String message) {
-        return message;
+    @Attachment(value = "{0}", type = "text/plain")
+    private String attachTextLog(String title, String log) {
+        return log;
     }
 
     // HTML attachments for Allure
@@ -32,7 +32,13 @@ public class AllureListener extends BaseTest implements ITestListener {
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         WebDriver driver = ((BaseTest) iTestResult.getInstance()).getDriver();
-        attachScreenshot(iTestResult.getName().toUpperCase(), driver);
+        attachTextLog(iTestResult.getName() + " FAILED", iTestResult.getThrowable().toString());
+        attachScreenshot(iTestResult.getName(), driver);
+    }
+
+    @Override
+    public void onTestSuccess(ITestResult iTestResult) {
+        attachTextLog(iTestResult.getName() + " PASSED", "");
     }
 
     @Override
@@ -53,10 +59,6 @@ public class AllureListener extends BaseTest implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult arg0) {
-    }
-
-    @Override
-    public void onTestSuccess(ITestResult arg0) {
     }
 
 }

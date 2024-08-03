@@ -101,6 +101,7 @@ public class BaseTest {
         boolean status = true;
         try {
             Assert.assertTrue(condition);
+            verificationPassed("TRUE");
         } catch (Throwable e) {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
@@ -115,6 +116,7 @@ public class BaseTest {
         boolean status = true;
         try {
             Assert.assertFalse(condition);
+            verificationPassed("FALSE");
         } catch (Throwable e) {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
@@ -140,16 +142,16 @@ public class BaseTest {
         return status;
     }
 
-    @Step(">> verify passed: value = {0}")
-    private void verificationPassed(Object expected) {
+    @Step("verification passed with value = {0}")
+    private void verificationPassed(Object value) {
     }
 
-    @Step(">> verify FAILED: {0}")
-    private void verificationFailed(String msg) {
+    @Step("verification FAILED: {0}")
+    private void verificationFailed(String failureMessage) {
         allureAttachScreenshot();
     }
 
-    @Attachment(value = "Verification failure Screenshot", type = "image/png")
+    @Attachment(value = "verification failure screenshot", type = "image/png")
     private byte[] allureAttachScreenshot() {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }

@@ -34,21 +34,23 @@ public class MethodListener implements IInvokedMethodListener {
                 if (failures.size() == 1) {
                     result.setThrowable(failures.get(0));
 
-                /*} else if (failures.size() == 2 && lastFailure.contains("java.lang.AssertionError")) {
-                    result.setThrowable(failures.get(0));*/
+                } else if (failures.size() == 2 && lastFailure.contains("java.lang.AssertionError")) {
+                    String message = "1 Verification failure\n" + Utils.shortStackTrace(failures.get(0), false) + "\n";
+                    result.setThrowable(new Throwable(message));
 
                 } else {
+                    StringBuffer message = new StringBuffer();
                     int adjustSize = 0;
                     if (lastFailure.contains("java.lang.AssertionError")) {
                         adjustSize = failures.size() - 1;
+                        message.append(adjustSize + " Verification failures\n");
                     } else {
                         adjustSize = failures.size();
+                        message.append(adjustSize + " Failures, including " + (adjustSize - 1) + " Verification & 1 Other\n");
                     }
-
-                    StringBuffer message = new StringBuffer(adjustSize + " Failure(s)\n");
                     for (int i = 0; i < adjustSize; i++) {
                         message.append("Failure " + (i + 1) + " of " + adjustSize + "\n");
-                        message.append(Utils.shortStackTrace(failures.get(i), false)).append("\n");
+                        message.append(Utils.shortStackTrace(failures.get(i), false)).append("\n\n");
                     }
                     result.setThrowable(new Throwable(message.toString()));
                 }

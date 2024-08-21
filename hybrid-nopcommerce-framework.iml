@@ -14,5 +14,6 @@
     <orderEntry type="library" name="log4j-reportng" level="project" />
     <orderEntry type="library" name="extentReports" level="project" />
     <orderEntry type="library" name="allure" level="project" />
+    <orderEntry type="library" name="jira" level="project" />
   </component>
 </module>

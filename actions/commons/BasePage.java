@@ -265,13 +265,14 @@ public class BasePage {
     }
 
     public boolean isElementDisplayed(WebDriver driver, String locator, String... restParameter) {
-        boolean status = false;
         setImplicitlyWait(driver, GlobalConstants.SHORT_TIMEOUT);
-        if (getListElementsSize(driver, locator, restParameter) != 0) {
-            status = getElement(driver, locator, restParameter).isDisplayed();
-        }
+        List<WebElement> elements = getListElements(driver, locator, restParameter);
         setImplicitlyWait(driver, GlobalConstants.LONG_TIMEOUT);
-        return status;
+        if (elements.isEmpty()) {
+            return false;
+        } else {
+            return elements.get(0).isDisplayed();
+        }
     }
 
     public boolean isElementSelected(WebDriver driver, String locator, String... restParameter) {

@@ -7,6 +7,8 @@ public class GlobalConstants {
     public static final String SEPARATOR = System.getProperty("file.separator");
     public static final String JAVA_VERSION = System.getProperty("java.version");
 
+    public static final String NOPCOMMERCE_LOCAL = "http://localhost/";
+
     // App Information User
     public static final String USER_URL = "https://demo.nopcommerce.com";
 
@@ -24,5 +26,11 @@ public class GlobalConstants {
     public static final String SCREENSHOTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "screenshots" + SEPARATOR;
     public static final String EXTENT_REPORTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "extentReports" + SEPARATOR;
     public static final String ALLURE_RESULTS_FOLDER_PATH = PROJECT_PATH + SEPARATOR + "allure-results" + SEPARATOR;
+
+    // JIRA
+    public static final String JIRA_URL = "https://haiph.atlassian.net";
+    public static final String JIRA_USERNAME = "hoanghai.phh@gmail.com";
+    public static final String JIRA_API_KEY = "ATATT3xFfGF010Vhfk0OQbqYc_mTQ7kXRHCV274zacfD5mtKL8jQTsy-Rh4O2d9INd5NDc0tQyEU66EAVx_V22Qrp2mo0JFrBewxSr5Gv8OjMkuC8zLWNBMmxKjOnWFa0qOdxAXC-WngMubeI4qopil-Q4Z2MYbpUupWL1Mp5BIQzJwOUsyK9Cg=FCC69E42";
+    public static final String JIRA_PROJECT_KEY = "SCRUM";
 
 }

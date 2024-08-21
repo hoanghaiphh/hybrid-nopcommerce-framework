@@ -2,19 +2,16 @@ package com.nopcommerce.user;
 
 import commons.BaseTest;
 import commons.GlobalConstants;
-import io.qameta.allure.*;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import jiraConfig.JiraCreateIssue;
+import org.testng.annotations.*;
 import pageObjects.nopcommerce.PageGenerator;
 import pageObjects.nopcommerce.user.HomePageObject;
 import pageObjects.nopcommerce.user.LoginPageObject;
 import pageObjects.nopcommerce.user.RegisterPageObject;
 import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
 
-@Feature("User")
-public class Level_16_Allure extends BaseTest {
+//@Listeners(jiraConfig.JiraListener.class) -->
+public class Level_17_Jira extends BaseTest {
 
     private CustomerInfoPageObject customerInfoPage;
     private HomePageObject homePage;
@@ -23,9 +20,6 @@ public class Level_16_Allure extends BaseTest {
 
     private String firstName = "Automation";
     private String lastName = "Testing";
-    private String dayOfBirth = "15";
-    private String monthOfBirth = "October";
-    private String yearOfBirth = "1989";
     private String companyName = "Online 29";
     private String emailAddress = firstName + lastName + getRandomNumber() + "@gmail.com";
     private String password = "Abcd@1234";
@@ -37,8 +31,7 @@ public class Level_16_Allure extends BaseTest {
         homePage = PageGenerator.getHomePage(driver);
     }
 
-    @Description("User_01_Register")
-    @Severity(SeverityLevel.NORMAL)
+    @JiraCreateIssue(isCreateIssue = true)
     @Test
     public void User_01_Register() {
         registerPage = (RegisterPageObject) homePage.clickOnHeaderLink("Register");
@@ -46,9 +39,6 @@ public class Level_16_Allure extends BaseTest {
         registerPage.clickOnGenderMaleRadio();
         registerPage.sendKeyToFirstnameTextbox(firstName);
         registerPage.sendKeyToLastnameTextbox(lastName);
-//        registerPage.selectItemInDayDropdown(dayOfBirth);
-//        registerPage.selectItemInMonthDropdown(monthOfBirth);
-//        registerPage.selectItemInYearDropdown(yearOfBirth);
         registerPage.sendKeyToEmailTextbox(emailAddress);
         registerPage.sendKeyToCompanyTextbox(companyName);
         registerPage.sendKeyToPasswordTextbox(password);
@@ -60,19 +50,17 @@ public class Level_16_Allure extends BaseTest {
         homePage = (HomePageObject) registerPage.clickOnHeaderLink("Log out");
     }
 
-    @Description("User_02_Login")
-    @Severity(SeverityLevel.CRITICAL)
+    @JiraCreateIssue(isCreateIssue = true)
     @Test
     public void User_02_Login() {
         loginPage = (LoginPageObject) homePage.clickOnHeaderLink("Log in");
 
         homePage = loginPage.loginToSystem(emailAddress, password);
 
-        verifyTrue(homePage.isMyAccountLinkDisplayed());
+        verifyFalse(homePage.isMyAccountLinkDisplayed()); // failed
     }
 
-    @Description("User_03_MyAccount")
-    @Severity(SeverityLevel.MINOR)
+    @JiraCreateIssue(isCreateIssue = true)
     @Test
     public void User_03_MyAccount() {
         customerInfoPage = (CustomerInfoPageObject) homePage.clickOnHeaderLink("My account");
@@ -80,9 +68,6 @@ public class Level_16_Allure extends BaseTest {
         verifyFalse(customerInfoPage.isGenderMaleSelected()); // failed
         verifyEquals(customerInfoPage.getValueInFirstnameTextbox(), firstName);
         verifyEquals(customerInfoPage.getValueInLastnameTextbox(), "Testing..."); // failed
-//        verifyEquals(customerInfoPage.getValueInDayDropdown(), dayOfBirth);
-//        verifyEquals(customerInfoPage.getValueInMonthDropdown(), monthOfBirth);
-//        verifyEquals(customerInfoPage.getValueInYearDropdown(), yearOfBirth);
         verifyEquals(customerInfoPage.getValueInCompanyTextbox(), companyName);
     }
 

@@ -30,5 +30,7 @@ public class GlobalConstants {
     // JIRA
     public static final String JIRA_URL = "https://haiph.atlassian.net";
     public static final String JIRA_USERNAME = "hoanghai.phh@gmail.com";
+    public static final String JIRA_API_KEY = "ATATT3xFfGF010Vhfk0OQbqYc_mTQ7kXRHCV274zacfD5mtKL8jQTsy-Rh4O2d9INd5NDc0tQyEU66EAVx_V22Qrp2mo0JFrBewxSr5Gv8OjMkuC8zLWNBMmxKjOnWFa0qOdxAXC-WngMubeI4qopil-Q4Z2MYbpUupWL1Mp5BIQzJwOUsyK9Cg=FCC69E42";
+    public static final String JIRA_PROJECT_KEY = "SCRUM";
 
 }

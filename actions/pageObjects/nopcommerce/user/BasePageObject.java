@@ -48,8 +48,8 @@ public class BasePageObject extends BasePage {
 
     @Step("Click on {0} link in header")
     public BasePageObject clickOnHeaderLink(String pageName) {
-        waitForElementClickable(driver, BasePageUI.HEADER_DYNAMIC_LINK, pageName);
-        clickOnElement(driver, BasePageUI.HEADER_DYNAMIC_LINK, pageName);
+        waitForElementClickable(driver, BasePageUI.DYNAMIC_HEADER_LINK_TEXT, pageName);
+        clickOnElement(driver, BasePageUI.DYNAMIC_HEADER_LINK_TEXT, pageName);
         return switch (pageName) {
             case ("Register") -> PageGenerator.getRegisterPage(driver);
             case ("My account") -> PageGenerator.getCustomerInfoPage(driver);
@@ -58,4 +58,49 @@ public class BasePageObject extends BasePage {
             default -> throw new RuntimeException("Page name is not valid !!!");
         };
     }
+
+    // Page Element Component Pattern Object
+
+    @Step("Input value to {0} textbox: {1}")
+    public void sendKeysToTextboxByID(String textboxID, String keyToSend) {
+        waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_ID, textboxID);
+        clearElementText(driver, BasePageUI.DYNAMIC_TEXTBOX_ID, textboxID);
+        sendKeysToElement(driver, BasePageUI.DYNAMIC_TEXTBOX_ID, keyToSend, textboxID);
+    }
+
+    @Step("Get value in {0} textbox")
+    public String getValueInTextboxByID(String textboxID) {
+        waitForElementVisible(driver, BasePageUI.DYNAMIC_TEXTBOX_ID, textboxID);
+        return getAttributeValue(driver, BasePageUI.DYNAMIC_TEXTBOX_ID, "value", textboxID);
+    }
+
+    @Step("Click on {0} button")
+    public void clickOnButtonByText(String buttonText) {
+        waitForElementClickable(driver, BasePageUI.DYNAMIC_BUTTON_TEXT, buttonText);
+        clickOnElement(driver, BasePageUI.DYNAMIC_BUTTON_TEXT, buttonText);
+    }
+
+    @Step("Select {0}")
+    public void selectCheckboxOrRadioByID(String id) {
+        waitForElementClickable(driver, BasePageUI.DYNAMIC_CHECKBOX_RADIO_ID, id);
+        selectCheckboxOrRadio(driver, BasePageUI.DYNAMIC_CHECKBOX_RADIO_ID, id);
+    }
+
+    @Step("{0} selected")
+    public boolean isCheckboxOrRadioByIDSelected(String id) {
+        waitForElementSelected(driver, BasePageUI.DYNAMIC_CHECKBOX_RADIO_ID, id);
+        return isElementSelected(driver, BasePageUI.DYNAMIC_CHECKBOX_RADIO_ID, id);
+    }
+
+    @Step("Click on {0} link in header")
+    public void clickOnHeaderLinkByText(String headerLinkText) {
+        waitForElementVisible(driver, BasePageUI.DYNAMIC_HEADER_LINK_TEXT, headerLinkText);
+        clickOnElement(driver, BasePageUI.DYNAMIC_HEADER_LINK_TEXT, headerLinkText);
+    }
+
+    @Step("{0} link displayed in header")
+    public boolean isHeaderLinkByTextDisplayed(String headerLinkText) {
+        return isElementDisplayed(driver, BasePageUI.DYNAMIC_HEADER_LINK_TEXT, headerLinkText);
+    }
+
 }

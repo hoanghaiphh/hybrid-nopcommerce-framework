@@ -7,7 +7,7 @@ public class GlobalConstants {
     public static final String SEPARATOR = System.getProperty("file.separator");
     public static final String JAVA_VERSION = System.getProperty("java.version");
 
-    public static final String NOPCOMMERCE_LOCAL = "http://localhost/";
+    public static final String NOPCOMMERCE_LOCAL = "http://local.nopcommerce.com/";
 
     // App Information User
     public static final String USER_URL = "https://demo.nopcommerce.com";

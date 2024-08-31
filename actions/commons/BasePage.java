@@ -128,6 +128,16 @@ public class BasePage {
         switchToWindow(driver, parentID);
     }
 
+    public Set<Cookie> getCookies(WebDriver driver) {
+        return driver.manage().getCookies();
+    }
+
+    public void setCookies(WebDriver driver, Set<Cookie> cookies) {
+        for (Cookie cookie : cookies) {
+            driver.manage().addCookie(cookie);
+        }
+    }
+
 //  Element ------------------------------------------------------------------------------------------------------------
 
     private By getByLocator(String byLocator) {

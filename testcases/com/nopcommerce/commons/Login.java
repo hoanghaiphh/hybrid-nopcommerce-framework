@@ -64,10 +64,7 @@ public class Login extends BaseTest {
 
         // Save Cookies
         nopcommerceCookies = homePage.getCookies(driver);
-    }
 
-    @AfterTest
-    public void afterTest() {
         driver.quit();
     }
 }

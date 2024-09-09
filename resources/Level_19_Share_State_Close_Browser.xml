@@ -11,7 +11,7 @@
         <parameter name="browser" value="Firefox"/>
         <classes>
             <class name="com.nopcommerce.commons.Login"/>
-            <class name="com.nopcommerce.user.Level_19_Share_Class_State"/>
+            <class name="com.nopcommerce.user.Level_19_Share_State_Close_Browser"/>
         </classes>
     </test>
 
@@ -19,7 +19,7 @@
         <parameter name="browser" value="Chrome"/>
         <classes>
             <class name="com.nopcommerce.commons.Login"/>
-            <class name="com.nopcommerce.user.Level_19_Share_Class_State"/>
+            <class name="com.nopcommerce.user.Level_19_Share_State_Close_Browser"/>
         </classes>
     </test>
 
@@ -27,7 +27,7 @@
         <parameter name="browser" value="Edge"/>
         <classes>
             <class name="com.nopcommerce.commons.Login"/>
-            <class name="com.nopcommerce.user.Level_19_Share_Class_State"/>
+            <class name="com.nopcommerce.user.Level_19_Share_State_Close_Browser"/>
         </classes>
     </test>
 

@@ -4,6 +4,7 @@ import commons.BaseTest;
 import commons.GlobalConstants;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -15,7 +16,7 @@ import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
 import static com.nopcommerce.commons.Login.*;
 
 @Feature("User")
-public class Level_19_Share_Class_State extends BaseTest {
+public class Level_19_Share_State_Close_Browser extends BaseTest {
     private CustomerInfoPageObject customerInfoPage;
     private HomePageObject homePage;
 
@@ -29,6 +30,7 @@ public class Level_19_Share_Class_State extends BaseTest {
         homePage.refreshCurrentPage(driver);
 
         verifyTrue(homePage.isHeaderLinkByTextDisplayed("My account"));
+        Assert.assertTrue(false); // failed
     }
 
     @Description("User_01_MyAccount")
@@ -45,7 +47,13 @@ public class Level_19_Share_Class_State extends BaseTest {
         verifyTrue(customerInfoPage.isCheckboxOrRadioByIDSelected("Newsletter"));
     }
 
-    @AfterClass
+    @Description("User_02_")
+    @Test
+    public void User_02_() {
+
+    }
+
+    @AfterClass(alwaysRun = true)
     public void afterClass() {
         driver.quit();
     }

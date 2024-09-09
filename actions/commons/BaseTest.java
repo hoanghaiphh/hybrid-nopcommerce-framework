@@ -14,24 +14,27 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.Assert;
 import org.testng.Reporter;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
 import reportConfig.ExtentManager;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 public class BaseTest {
 
     protected WebDriver driver;
+
     public WebDriver getDriver() {
         return driver;
-    }
-
-    protected final Logger log;
-    protected BaseTest() {
-        log = LogManager.getLogger(getClass());
     }
 
     protected WebDriver getBrowserDriver(String browserName) {
@@ -78,7 +81,19 @@ public class BaseTest {
         return new Random().nextInt(999999);
     }
 
-    protected void deleteAllFilesInFolder(String folder) {
+    protected final Logger log;
+
+    protected BaseTest() {
+        log = LogManager.getLogger(getClass());
+    }
+
+    @BeforeSuite
+    protected void clearReport() {
+        deleteAllFilesInFolder(GlobalConstants.SCREENSHOTS_FOLDER_PATH);
+        deleteAllFilesInFolder(GlobalConstants.ALLURE_RESULTS_FOLDER_PATH);
+    }
+
+    private void deleteAllFilesInFolder(String folder) {
         try {
             File[] listOfFiles = new File(folder).listFiles();
             for (File file : listOfFiles) {
@@ -91,12 +106,6 @@ public class BaseTest {
         }
     }
 
-    @BeforeSuite
-    protected void clearReport() {
-        deleteAllFilesInFolder(GlobalConstants.SCREENSHOTS_FOLDER_PATH);
-        deleteAllFilesInFolder(GlobalConstants.ALLURE_RESULTS_FOLDER_PATH);
-    }
-
     protected boolean verifyTrue(boolean condition) {
         boolean status = true;
         try {
@@ -106,7 +115,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
-//            extentAttachScreenshot(e);
+            /*extentAttachScreenshot(e);*/
             verificationFailed(e.getMessage());
         }
         return status;
@@ -121,7 +130,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
-//            extentAttachScreenshot(e);
+            /*extentAttachScreenshot(e);*/
             verificationFailed(e.getMessage());
         }
         return status;
@@ -136,7 +145,7 @@ public class BaseTest {
             status = false;
             VerificationFailures.getFailures().addFailureForTest(Reporter.getCurrentTestResult(), e);
             Reporter.getCurrentTestResult().setThrowable(e);
-//            extentAttachScreenshot(e);
+            /*extentAttachScreenshot(e);*/
             verificationFailed(e.getMessage());
         }
         return status;
@@ -156,7 +165,7 @@ public class BaseTest {
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
 
-//    @BeforeMethod
+    /*@BeforeMethod*/
     protected void extentStartTest(Method method) {
         ExtentManager.startTest(method.getName() + " - Run on " + BasePage.getCurrentBrowserName(driver), method.getName());
     }
@@ -165,10 +174,67 @@ public class BaseTest {
         ExtentManager.getTest().log(Status.INFO, msg);
     }
 
-    protected void extentAttachScreenshot(Throwable e) {
+    private void extentAttachScreenshot(Throwable e) {
         String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
         ExtentManager.getTest().log(Status.FAIL, "java.lang.AssertionError: " + e.getMessage(),
                 ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
+    }
+
+    protected void closeBrowserDriver() {
+        String driverInstanceName = driver.toString();
+        log.info("OS name = " + GlobalConstants.OS_NAME);
+        log.info("Driver instance name = " + driverInstanceName);
+
+        String browserDriverName = null;
+        if (driverInstanceName.contains("Chrome")) {
+            browserDriverName = "chromedriver";
+        } else if (driverInstanceName.contains("Firefox")) {
+            browserDriverName = "geckodriver";
+        } else if (driverInstanceName.contains("Edge")) {
+            browserDriverName = "msedgedriver";
+        } else if (driverInstanceName.contains("Opera")) {
+            browserDriverName = "operadriver";
+        } else if (driverInstanceName.contains("Safari")) {
+            browserDriverName = "safaridriver";
+        }
+
+        String cmd = null;
+        if (GlobalConstants.OS_NAME.contains("Window")) {
+            cmd = "taskkill /F /FI \"IMAGENAME eq " + browserDriverName + "*\"";
+        } else {
+            cmd = "pkill " + browserDriverName;
+        }
+
+        if (driver != null) {
+            driver.manage().deleteAllCookies();
+            driver.quit();
+        }
+        try {
+            Process process = Runtime.getRuntime().exec(cmd);
+            process.waitFor();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @AfterSuite
+    protected void killAllBrowserDrivers() {
+        String[] browserDrivers = {"chromedriver", "geckodriver", "msedgedriver", "safaridriver"};
+        for (String browserDriver : browserDrivers) {
+            String cmd = null;
+            if (GlobalConstants.OS_NAME.contains("Window")) {
+                cmd = "taskkill /F /FI \"IMAGENAME eq " + browserDriver + "*\"";
+            } else {
+                cmd = "pkill " + browserDriver;
+            }
+            try {
+                Process process = Runtime.getRuntime().exec(cmd);
+                process.waitFor();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        System.out.println(new Date() + " - All browser drivers was killed.");
     }
 
 }

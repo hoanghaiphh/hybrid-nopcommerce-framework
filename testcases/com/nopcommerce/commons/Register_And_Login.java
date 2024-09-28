@@ -13,7 +13,7 @@ import pageObjects.nopcommerce.user.RegisterPageObject;
 import java.util.Set;
 
 @Feature("User")
-public class Login extends BaseTest {
+public class Register_And_Login extends BaseTest {
     private HomePageObject homePage;
     private RegisterPageObject registerPage;
     private LoginPageObject loginPage;
@@ -22,8 +22,9 @@ public class Login extends BaseTest {
     public static Set<Cookie> nopcommerceCookies;
 
     @Parameters("browser")
-    @BeforeTest
-    public void beforeTest(String browserName) {
+    /*@BeforeTest*/
+    @Test
+    public void User_Register_And_Login(String browserName) {
         driver = openBrowserWithUrl(browserName, GlobalConstants.NOPCOMMERCE_LOCAL);
         homePage = PageGenerator.getHomePage(driver);
 
@@ -65,6 +66,5 @@ public class Login extends BaseTest {
         // Save Cookies
         nopcommerceCookies = homePage.getCookies(driver);
 
-        driver.quit();
     }
 }

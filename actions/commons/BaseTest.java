@@ -180,6 +180,7 @@ public class BaseTest {
                 ExtentManager.getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
     }
 
+    @AfterClass(alwaysRun = true)
     protected void closeBrowserDriver() {
         String driverInstanceName = driver.toString();
         log.info("OS name = " + GlobalConstants.OS_NAME);

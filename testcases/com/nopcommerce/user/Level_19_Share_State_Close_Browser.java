@@ -4,8 +4,9 @@ import commons.BaseTest;
 import commons.GlobalConstants;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
-import org.testng.Assert;
-import org.testng.annotations.AfterClass;
+
+import static org.testng.Assert.*;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -13,7 +14,7 @@ import pageObjects.nopcommerce.PageGenerator;
 import pageObjects.nopcommerce.user.HomePageObject;
 import pageObjects.nopcommerce.user.myAccount.CustomerInfoPageObject;
 
-import static com.nopcommerce.commons.Login.*;
+import static com.nopcommerce.commons.Register_And_Login.*;
 
 @Feature("User")
 public class Level_19_Share_State_Close_Browser extends BaseTest {
@@ -29,8 +30,7 @@ public class Level_19_Share_State_Close_Browser extends BaseTest {
         homePage.setCookies(driver, nopcommerceCookies);
         homePage.refreshCurrentPage(driver);
 
-        verifyTrue(homePage.isHeaderLinkByTextDisplayed("My account"));
-        Assert.assertTrue(false); // failed
+        assertFalse(homePage.isHeaderLinkByTextDisplayed("My account")); // failed
     }
 
     @Description("User_01_MyAccount")
@@ -39,12 +39,12 @@ public class Level_19_Share_State_Close_Browser extends BaseTest {
         homePage.clickOnHeaderLinkByText("My account");
         customerInfoPage = PageGenerator.getCustomerInfoPage(driver);
 
-        verifyTrue(customerInfoPage.isCheckboxOrRadioByIDSelected("gender-male"));
-        verifyEquals(customerInfoPage.getValueInTextboxByID("FirstName"), firstName);
-        verifyEquals(customerInfoPage.getValueInTextboxByID("LastName"), lastName);
-        verifyEquals(customerInfoPage.getValueInTextboxByID("Email"), emailAddress);
-        verifyEquals(customerInfoPage.getValueInTextboxByID("Company"), companyName);
-        verifyTrue(customerInfoPage.isCheckboxOrRadioByIDSelected("Newsletter"));
+        assertTrue(customerInfoPage.isCheckboxOrRadioByIDSelected("gender-male"));
+        assertEquals(customerInfoPage.getValueInTextboxByID("FirstName"), firstName);
+        assertEquals(customerInfoPage.getValueInTextboxByID("LastName"), lastName);
+        assertEquals(customerInfoPage.getValueInTextboxByID("Email"), emailAddress);
+        assertEquals(customerInfoPage.getValueInTextboxByID("Company"), companyName);
+        assertTrue(customerInfoPage.isCheckboxOrRadioByIDSelected("Newsletter"));
     }
 
     @Description("User_02_")
@@ -53,8 +53,10 @@ public class Level_19_Share_State_Close_Browser extends BaseTest {
 
     }
 
-    @AfterClass(alwaysRun = true)
-    public void afterClass() {
-        driver.quit();
+    @Description("User_03_")
+    @Test
+    public void User_03_() {
+
     }
+
 }

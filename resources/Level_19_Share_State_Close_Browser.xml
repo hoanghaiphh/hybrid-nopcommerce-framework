@@ -3,14 +3,14 @@
 <suite name="NopCommerce Automation Testing">
 
     <listeners>
-        <listener class-name="commons.MethodListener"/>
+        <!--<listener class-name="commons.MethodListener"/>-->
         <listener class-name="reportConfig.AllureListener"/>
     </listeners>
 
     <test name="Run on Firefox browser" preserve-order="true">
         <parameter name="browser" value="Firefox"/>
         <classes>
-            <class name="com.nopcommerce.commons.Login"/>
+            <class name="com.nopcommerce.commons.Register_And_Login"/>
             <class name="com.nopcommerce.user.Level_19_Share_State_Close_Browser"/>
         </classes>
     </test>
@@ -18,7 +18,7 @@
     <test name="Run on Chrome browser" preserve-order="true">
         <parameter name="browser" value="Chrome"/>
         <classes>
-            <class name="com.nopcommerce.commons.Login"/>
+            <class name="com.nopcommerce.commons.Register_And_Login"/>
             <class name="com.nopcommerce.user.Level_19_Share_State_Close_Browser"/>
         </classes>
     </test>
@@ -26,7 +26,7 @@
     <test name="Run on Edge browser" preserve-order="true">
         <parameter name="browser" value="Edge"/>
         <classes>
-            <class name="com.nopcommerce.commons.Login"/>
+            <class name="com.nopcommerce.commons.Register_And_Login"/>
             <class name="com.nopcommerce.user.Level_19_Share_State_Close_Browser"/>
         </classes>
     </test>
